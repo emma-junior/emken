@@ -3,8 +3,20 @@ import "./navbar.scss"
 
 const Navbar = () => {
     const [color, setColor] = useState<boolean>(false);
+
+    const changeColor = () => {
+        if (window.scrollY >= 1) {
+            setColor(true);
+        } else {
+            setColor(false);
+        }
+    };
+
+    useEffect(() => {
+		window.addEventListener("scroll", changeColor);
+  }, [])
   return (
-    <nav className='navbar'>
+    <nav className={color ? 'navbar navbar-bg' : 'navbar'}>
         <div className='navbar-wrapper'>
             <h3>EMKEN</h3>
             <ul>
