@@ -1,10 +1,30 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin center($height) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $height;
+}
 
 .navbar-bg {
     background-color: #fff;
     transition: 0.5s;
 }
 .navbar {
-    // background: #fff;
     position: fixed;
     z-index: 10;
     width: 100%;
@@ -20,51 +40,83 @@
 
         h3 {
             color: #2379f9;
-            // display: flex;
             height: 100%;
             margin: auto 0;
-            // align-items: center;
             cursor: pointer;
         }
-
-        ul {
+        .nav-links, .show-sidebar {
             display: flex;
-            width: 45%;
+            width: 80%;
             justify-content: space-between;
-
-            li {
-                list-style: none;
-                font-size: 14px;
-                cursor: pointer;
-                display: flex;
-                height: 100%;
-                align-items: center;
+            @include tab {
+                @include center(100vh);
+                background: #FFFFFF;
+                position: absolute;
+                top: 0;
+                transition: 0.5s;
+                z-index: 0;
             }
+            
+            ul {
+                display: flex;
+                width: 55%;
+                justify-content: space-between;
+                @include tab {
+                    @include center(40vh);
+                }
+    
+                li {
+                    list-style: none;
+                    font-size: 14px;
+                    cursor: pointer;
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                }
+            }
+            .signup-login {
+                display: flex;
+                width: 20%;
+                justify-content: space-between;
+                @include tab {
+                    flex-direction: column;
+                    width: 100%;
+                }
+    
+                .signup {
+                    font-size: 14px;
+                    font-weight: 600;
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    cursor: pointer;
+                    @include tab {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+                button {
+                    width: 100px;
+                    height: 40px;
+                    @include tab {
+                        height: 75px;
+                        margin: 0 auto;
+                    }
+                }
+            }          
         }
-        .signup-login {
-            display: flex;
-            width: 15%;
-            justify-content: space-between;
-
-            .signup {
-                font-size: 14px;
-                font-weight: 600;
-                display: flex;
-                height: 100%;
-                align-items: center;
-                cursor: pointer;
-            }
-            .login-btn {
-                width: 100px;
-                height: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: none;
-                border-radius: 30px;
-                color: #fff;
-                background: #2379f9;
-                cursor: pointer;
+        .nav-links {
+            left: -100%;
+        }
+        .show-sidebar {
+            left: 0;
+        }
+        .mobile-icon {
+            display: none;
+            @include tab {
+                display: block;
+                transition: transform .1s;
+                z-index: 10;
             }
         }
     }

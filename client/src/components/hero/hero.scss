@@ -1,15 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
 
 .hero {
     display: flex;
     width: 90%;
     margin: 0 auto;
     padding: 60px 0;
+    @include tab {
+        flex-direction: column;
+        padding: 100px 0 70px;
+    }
 
     .hero-content {
     	height: 100%;
         margin: auto 0;
         width: 60%;
+        @include tab {
+            width: 100%;
+        }
 
         .hero-topic {
             font-size: 37px;
@@ -17,29 +37,35 @@
             line-height: 1.5;
             color: #2379f9;
             letter-spacing: 2px;
+            @include tab {
+                font-size: 32px;
+            }
+            @include mobile {
+                font-size: 27px;
+            }
         }
         p {
-            margin: 20px 0;
+            margin: 10px 0 30px;
         }
         button {
-            margin-top: 10px;
             width: 120px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: none;
-            border-radius: 40px;
-            color: #fff;
-            background: #2379f9;
-            cursor: pointer;
-            font-weight: 600;
+            height: 50px;
+            @include tab {
+                width: 140px;
+                font-size: 16px;
+            }          
         }
     }
     .hero-pic {
         
         img {
-            width: 700px;
+            width: 600px;
+            @include tab {
+                width: 400px;
+            }
+            @include mobile {
+                width: 350px;
+            }
         }
     }
 }
