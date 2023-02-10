@@ -58,7 +58,7 @@
     }
     .hero-pic {
         
-        img {
+        .pic {
             width: 600px;
             @include tab {
                 width: 400px;
