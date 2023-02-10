@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../button/Button'
 import "./hero.scss"
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Hero = () => {
   return (
@@ -11,7 +12,14 @@ const Hero = () => {
         <Button text="Get Started" />
       </div>
       <div className='hero-pic'>
-        <img src='./assets/images/heroimg.png' alt='' />
+        {/* <img src='./assets/images/heroimg.png' alt='' /> */}
+        <LazyLoadImage
+        className="pic"
+        src="/assets/images/heroimg.png"
+        placeholderSrc="/assets/images/hero-placeholder.png"
+        // effect="blur"
+        alt=""
+      />
       </div>
     </section>
   )
