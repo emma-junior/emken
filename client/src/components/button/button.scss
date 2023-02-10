@@ -13,7 +13,6 @@
 }
 
 button {
-    // height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,9 +22,6 @@ button {
     background: #2379f9;
     cursor: pointer;
     font-weight: 600;
-    // @include tab {
-    //     height: 50px;
-    // }
 
     &:hover {
         background-color: #7cadf7;
