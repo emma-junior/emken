@@ -1,0 +1,49 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin center($height) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $height;
+}
+
+.container {
+    width: 60%;
+    @include tab {
+        width: 90%;
+    }
+    margin: 60px auto;
+
+    .services {
+        color: #fe5252;
+        font-weight: 700;
+        text-align: center;
+    }
+    .best-services {
+        text-align: center;
+        font-size: 27px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 600;
+        color: #1f3e72;
+        letter-spacing: 2px;
+        margin: 7px 0;
+    }
+    .services-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0 20px;
+    }
+}
