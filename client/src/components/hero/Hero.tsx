@@ -12,14 +12,14 @@ const Hero = () => {
         <Button text="Get Started" />
       </div>
       <div className='hero-pic'>
-        {/* <img src='./assets/images/heroimg.png' alt='' /> */}
+        {/* <img src='./assets/images/hero-placeholder.png' alt='' /> */}
         <LazyLoadImage
-        className="pic"
-        src="/assets/images/heroimg.png"
-        placeholderSrc="/assets/images/hero-placeholder.png"
-        // effect="blur"
-        alt=""
-      />
+          className="pic"
+          src="/assets/images/heroimg.png"
+          placeholderSrc="/assets/hero-placeholder.png"
+          effect="blur"
+          alt=""
+        />
       </div>
     </section>
   )
