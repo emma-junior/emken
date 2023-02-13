@@ -57,6 +57,11 @@
         }
     }
     .hero-pic {
+        @include tab {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
         
         .pic {
             width: 600px;
