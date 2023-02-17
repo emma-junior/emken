@@ -1,0 +1,57 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+.section-container {
+    display: flex;
+    width: 70%;
+    justify-content: space-between; 
+    margin: 0 auto;
+    padding: 10px 0;
+        @include tab {
+            width: 90%;
+        }
+    .pic {
+        width: 410px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 150px 10px 150px 150px;
+    }
+    .content {
+        width: 50%;
+        height: 100%;
+        margin: auto 0;
+
+        .topic {
+            color: #fe5252;
+            font-weight: 700;
+        }
+        .headline {
+            font-size: 25px;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+            color: #1f3e72;
+            letter-spacing: 2px;
+            margin: 7px 0;
+        }
+        .info {
+            font-size: 14px;
+            color: #838fa5;
+            margin: 20px 0;
+        }
+        button {
+            width: 100px;
+            height: 40px;
+        }
+    }
+}
