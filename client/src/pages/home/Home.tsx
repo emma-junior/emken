@@ -1,4 +1,5 @@
 import React from 'react'
+import Emergency from '../../components/emergency/Emergency'
 import Hero from '../../components/hero/Hero'
 import Navbar from '../../components/navbar/Navbar'
 import Services from '../../components/sevices/Services'
@@ -12,6 +13,7 @@ const Home = () => {
           <Hero />
         </div>
         <Services />
+        <Emergency />
     </section>
   )
 }
