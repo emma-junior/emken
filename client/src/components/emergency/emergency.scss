@@ -18,15 +18,23 @@
     justify-content: space-between; 
     margin: 0 auto;
     padding: 10px 0;
-        @include mobile {
-            flex-direction: column-reverse;
-            width: 90%;
-        }
+    
+    @include tab {
+        width: 95%;
+    }
+    @include mobile {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
     .pic {
         width: 410px;
         height: 320px;
         object-fit: cover;
         border-radius: 150px 10px 150px 150px;
+        @include tab {
+            width: 330px;
+            height: 330px;
+        }
         @include mobile {
             width: 300px;
             height: 300px;
@@ -37,6 +45,9 @@
         width: 50%;
         height: 100%;
         margin: auto ;
+        @include mobile {
+            width: 45%;
+        }
         @include mobile {
             width: 100%;
         }
