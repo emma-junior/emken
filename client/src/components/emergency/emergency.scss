@@ -18,7 +18,8 @@
     justify-content: space-between; 
     margin: 0 auto;
     padding: 10px 0;
-        @include tab {
+        @include mobile {
+            flex-direction: column-reverse;
             width: 90%;
         }
     .pic {
@@ -26,11 +27,19 @@
         height: 320px;
         object-fit: cover;
         border-radius: 150px 10px 150px 150px;
+        @include mobile {
+            width: 300px;
+            height: 300px;
+            margin: 8px auto;
+        }
     }
     .content {
         width: 50%;
         height: 100%;
-        margin: auto 0;
+        margin: auto ;
+        @include mobile {
+            width: 100%;
+        }
 
         .topic {
             color: #fe5252;
@@ -45,7 +54,7 @@
             margin: 7px 0;
         }
         .info {
-            font-size: 14px;
+            font-size: 15px;
             color: #838fa5;
             margin: 20px 0;
         }
