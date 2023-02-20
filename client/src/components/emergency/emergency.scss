@@ -17,7 +17,7 @@
     width: 70%;
     justify-content: space-between; 
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 20px 0;
     
     @include tab {
         width: 95%;
@@ -25,6 +25,7 @@
     @include mobile {
         flex-direction: column-reverse;
         width: 90%;
+        padding: 10px 0 50px;
     }
     .pic {
         width: 410px;
@@ -73,5 +74,10 @@
             width: 100px;
             height: 40px;
         }
+    }
+}
+.hospital {
+    @include mobile {
+        flex-direction: column;
     }
 }
