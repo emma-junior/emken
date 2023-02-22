@@ -8,16 +8,16 @@ const Hospital = () => {
   return (
     <section className='section-container hospital'>
         <div className='content'>
-            <p className='topic'>LOCATE HOSPITAL</p>
+            <p className='topic'>FIND HOSPITAL</p>
             <h2 className='headline'>Get Locations To Medical Hospitals Around You</h2>
             <p className='info'>Emken provides you with location and direction to medical hospitals incase of medical emergency situations. </p>
-            <Button text="Locate Now" />
+            <Button text="Find Now" />
         </div>
         <div className='pic'>
           <LazyLoadImage
             className="pic"
             src="/assets/images/locate.jpg"
-            placeholderSrc="/assets/locate-placeholder.jpg"
+            placeholderSrc="/assets/images/locate-placeholder.jpg"
             effect="blur"
             alt="medical emergency"
           />
