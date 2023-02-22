@@ -11,7 +11,7 @@ const Emergency = () => {
           <LazyLoadImage
             className="pic"
             src="/assets/images/emergency.jpg"
-            placeholderSrc="/assets/emergency-placeholder.jpg"
+            placeholderSrc="/assets/images/emergency-placeholder.jpg"
             effect="blur"
             alt="medical emergency"
           />

@@ -28,13 +28,13 @@
         padding: 10px 0 50px;
     }
     .pic {
-        width: 410px;
-        height: 320px;
+        width: 430px;
+        height: 330px;
         object-fit: cover;
-        border-radius: 150px 10px 150px 150px;
+        border-radius: 170px 10px 170px 170px;
         @include tab {
             width: 330px;
-            height: 330px;
+            border-radius: 150px 10px 150px 150px;
         }
         @include mobile {
             width: 300px;
@@ -43,7 +43,7 @@
         }
     }
     .content {
-        width: 50%;
+        width: 47%;
         height: 100%;
         margin: auto ;
         @include mobile {

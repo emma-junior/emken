@@ -1,4 +1,5 @@
 import React from 'react'
+import Doctor from '../../components/doctor/Doctor'
 import Emergency from '../../components/emergency/Emergency'
 import Hero from '../../components/hero/Hero'
 import Hospital from '../../components/hospital/Hospital'
@@ -16,6 +17,7 @@ const Home = () => {
         <Services />
         <Emergency />
         <Hospital />
+        <Doctor />
     </section>
   )
 }
