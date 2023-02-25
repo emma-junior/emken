@@ -1,0 +1,19 @@
+.card {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    width: 300px;
+    .doctor-pic {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+    }
+    .doctor-name {
+        color: #2379f9;
+        font-weight: 600;
+        text-align: center;
+    }
+    .icons {
+        display: flex;
+        color: #2379f9;
+        justify-content: center;
+    }
+}
