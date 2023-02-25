@@ -8,16 +8,17 @@ interface Props {
 }
 const DoctorCard = ({doctor}:Props) => {
   return (
-    <div className='card'>
+    <section className='card'>
         <img className='doctor-pic' src={`/assets/images/doctors/${doctor.image}.jpg`} alt='doctor' />
-
-        <p className='doctor-name'>{doctor.name}</p>
-        <div className='icons'>
-            <p><FaFacebookF /></p>
-            <p><FaTwitter /></p>
-            <p><FaLinkedinIn /></p>
+        <div className='content'>
+            <p className='doctor-name'>{doctor.name}</p>
+            <div className='icons'>
+                <p className='icon'><FaFacebookF /></p>
+                <p className='icon'><FaTwitter /></p>
+                <p className='icon'><FaLinkedinIn /></p>
+            </div>
         </div>
-    </div>
+    </section>
   )
 }
 

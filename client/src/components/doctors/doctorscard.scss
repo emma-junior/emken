@@ -1,19 +1,47 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
 .card {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
     width: 300px;
+    border-radius: 20px;
     .doctor-pic {
         width: 100%;
         height: 260px;
         object-fit: cover;
+        border-radius: 20px 20px 0 0;
     }
-    .doctor-name {
-        color: #2379f9;
-        font-weight: 600;
-        text-align: center;
-    }
-    .icons {
+    .content {
+        height: 80px;
         display: flex;
-        color: #2379f9;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5px;
+        .doctor-name {
+            color: #2379f9;
+            font-weight: 600;
+            text-align: center;
+        }
+        .icons {
+            display: flex;
+            color: #2379f9;
+            justify-content: center;
+
+            .icon {
+                margin: 0 5px;
+                cursor: pointer;
+            }
+        }
     }
 }

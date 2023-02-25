@@ -1,6 +1,28 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
 
 .doctors-container {
     margin: 60px auto;
+    width: 75%;
+    
+        @include tab {
+            width: 90%;
+        }
+    
+        @include mobile {
+            width: 85%;
+        }
 
     .title {
         color: #fe5252;
@@ -15,5 +37,15 @@
         color: #1f3e72;
         letter-spacing: 2px;
         margin: 7px 0;
+    }
+    .doctors {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 50px 0;
+        
+        @include mobile {
+            flex-direction: column;
+        }
     }
 }
