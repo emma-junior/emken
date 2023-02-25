@@ -36,7 +36,7 @@ const Doctors = () => {
     <section className='doctors-container'>
         <p className='title'>OUR DOCTORS</p>
         <p className='meet'>Meet Our Professional Doctors</p>
-        <div>{doctors.map((doctor) => <DoctorCard key={doctor.id} doctor={doctor} />)}</div>
+        <div className='doctors'>{doctors.map((doctor) => <DoctorCard key={doctor.id} doctor={doctor} />)}</div>
     </section>
   )
 }
