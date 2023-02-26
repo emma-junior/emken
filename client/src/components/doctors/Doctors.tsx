@@ -9,7 +9,7 @@ const Doctors = () => {
         {
             id: 1,
             image: "doctor-one",
-            name: "Johnson Peter",
+            name: "Dr. Johnson Peter",
             facebookAddress: "https://emken.vercel.app/",
             twitterAddress: "https://emken.vercel.app/",
             linkedinAddress: "https://emken.vercel.app/"
@@ -17,7 +17,7 @@ const Doctors = () => {
         {
             id: 2,
             image: "doctor-two",
-            name: "Johnson Peter",
+            name: "Dr. Obi Esther",
             facebookAddress: "https://emken.vercel.app/",
             twitterAddress: "https://emken.vercel.app/",
             linkedinAddress: "https://emken.vercel.app/"
@@ -25,7 +25,7 @@ const Doctors = () => {
         {
             id: 3,
             image: "doctor-three",
-            name: "Johnson Peter",
+            name: "Dr. Ezeh Charles",
             facebookAddress: "https://emken.vercel.app/",
             twitterAddress: "https://emken.vercel.app/",
             linkedinAddress: "https://emken.vercel.app/"
