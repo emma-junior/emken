@@ -17,7 +17,7 @@
     width: 75%;
     
         @include tab {
-            width: 90%;
+            width: 95%;
         }
     
         @include mobile {
@@ -32,6 +32,9 @@
     .meet {
         text-align: center;
         font-size: 27px;
+        @include mobile {
+            font-size: 23px;
+        }
         font-family: 'Roboto Slab', serif;
         font-weight: 600;
         color: #1f3e72;
@@ -42,10 +45,11 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        margin: 50px 0;
+        margin: 50px auto;
         
         @include mobile {
             flex-direction: column;
+            justify-content: center;
         }
     }
 }
