@@ -1,0 +1,122 @@
+.navbar-bg {
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+}
+.navbar .navbar-wrapper {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.navbar .navbar-wrapper h3 {
+  color: #2379f9;
+  height: 100%;
+  font-size: 25px;
+  margin: auto 0;
+  cursor: pointer;
+}
+.navbar .navbar-wrapper .nav-links, .navbar .navbar-wrapper .show-sidebar {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+@media (max-width: 820px) {
+  .navbar .navbar-wrapper .nav-links, .navbar .navbar-wrapper .show-sidebar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    z-index: 0;
+  }
+}
+.navbar .navbar-wrapper .nav-links ul, .navbar .navbar-wrapper .show-sidebar ul {
+  display: flex;
+  width: 55%;
+  justify-content: space-between;
+  font-weight: 600;
+}
+@media (max-width: 820px) {
+  .navbar .navbar-wrapper .nav-links ul, .navbar .navbar-wrapper .show-sidebar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35vh;
+  }
+}
+.navbar .navbar-wrapper .nav-links ul li, .navbar .navbar-wrapper .show-sidebar ul li {
+  list-style: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.navbar .navbar-wrapper .nav-links .signup-login, .navbar .navbar-wrapper .show-sidebar .signup-login {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+}
+@media (max-width: 820px) {
+  .navbar .navbar-wrapper .nav-links .signup-login, .navbar .navbar-wrapper .show-sidebar .signup-login {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.navbar .navbar-wrapper .nav-links .signup-login .signup, .navbar .navbar-wrapper .show-sidebar .signup-login .signup {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  cursor: pointer;
+}
+@media (max-width: 820px) {
+  .navbar .navbar-wrapper .nav-links .signup-login .signup, .navbar .navbar-wrapper .show-sidebar .signup-login .signup {
+    width: 100%;
+    justify-content: center;
+    color: #0d65e9;
+  }
+}
+.navbar .navbar-wrapper .nav-links .signup-login button, .navbar .navbar-wrapper .show-sidebar .signup-login button {
+  width: 100px;
+  height: 40px;
+}
+@media (max-width: 820px) {
+  .navbar .navbar-wrapper .nav-links .signup-login button, .navbar .navbar-wrapper .show-sidebar .signup-login button {
+    height: 75px;
+    margin: 0 auto;
+  }
+}
+.navbar .navbar-wrapper .nav-links {
+  left: -100%;
+}
+.navbar .navbar-wrapper .show-sidebar {
+  left: 0;
+}
+.navbar .navbar-wrapper .mobile-icon {
+  display: none;
+}
+@media (max-width: 820px) {
+  .navbar .navbar-wrapper .mobile-icon {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.1s;
+    z-index: 10;
+  }
+}/*# sourceMappingURL=navbar.css.map */
