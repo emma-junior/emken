@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../button/Button'
 import "./hero.scss"
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Hero = () => {
   return (
@@ -16,6 +17,7 @@ const Hero = () => {
           className="pic"
           src="/assets/images/heropic.png"
           placeholderSrc="/assets/images/hero-placeholder.png"
+          effect="blur"
           alt="doctor image"
         />
       </div>
