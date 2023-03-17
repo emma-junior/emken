@@ -15,7 +15,7 @@ const Hero = () => {
         <LazyLoadImage
           className="pic"
           src="/assets/images/heropic.png"
-          placeholderSrc="/assets/hero-placeholder.png"
+          placeholderSrc="/assets/images/hero-placeholder.png"
           alt="doctor image"
         />
       </div>
