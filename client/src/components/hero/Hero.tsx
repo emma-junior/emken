@@ -1,4 +1,3 @@
-import React from 'react'
 import Button from '../button/Button'
 import "./hero.scss"
 import { LazyLoadImage } from "react-lazy-load-image-component";
