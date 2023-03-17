@@ -65,11 +65,14 @@
         
         .pic {
             width: 600px;
+            height: 600px;
             @include tab {
                 width: 400px;
+                height: 400px;
             }
             @include mobile {
                 width: 350px;
+                height: 350px;
             }
         }
     }
