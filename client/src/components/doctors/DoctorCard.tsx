@@ -11,7 +11,6 @@ interface Props {
 const DoctorCard = ({doctor}:Props) => {
   return (
     <section className='card'>
-        {/* <img className='doctor-pic' src={`/assets/images/doctors/${doctor.image}.jpg`} alt='doctor' /> */}
         <LazyLoadImage
           className="doctor-pic"
           src={`/assets/images/doctors/${doctor.image}.jpg`}
