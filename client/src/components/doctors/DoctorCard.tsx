@@ -1,5 +1,5 @@
 import React from 'react'
-import { doctorsType } from '../../model'
+import { doctorsType } from '../../data/doctors';
 import "./doctorscard.scss"
 import {FaFacebookF, FaTwitter, FaLinkedinIn} from "react-icons/fa"
 import { LazyLoadImage } from "react-lazy-load-image-component";

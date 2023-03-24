@@ -1,5 +1,5 @@
 import React from 'react'
-import { servicesType } from '../../model'
+import { servicesType } from '../../data/services'
 import "./servicescard.scss"
 
 

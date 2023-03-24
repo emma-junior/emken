@@ -1,37 +1,9 @@
 import React from 'react'
-import { doctorsType } from '../../model'
+import { doctors } from '../../data/doctors'
 import DoctorCard from './DoctorCard'
 import "./doctors.scss"
 
 const Doctors = () => {
-
-    const doctors:doctorsType[] = [
-        {
-            id: 1,
-            image: "doctor-one",
-            name: "Dr. Johnson Peter",
-            facebookAddress: "https://emken.vercel.app/",
-            twitterAddress: "https://emken.vercel.app/",
-            linkedinAddress: "https://emken.vercel.app/"
-        },
-        {
-            id: 2,
-            image: "doctor-two",
-            name: "Dr. Obi Esther",
-            facebookAddress: "https://emken.vercel.app/",
-            twitterAddress: "https://emken.vercel.app/",
-            linkedinAddress: "https://emken.vercel.app/"
-        },
-        {
-            id: 3,
-            image: "doctor-three",
-            name: "Dr. Ezeh Charles",
-            facebookAddress: "https://emken.vercel.app/",
-            twitterAddress: "https://emken.vercel.app/",
-            linkedinAddress: "https://emken.vercel.app/"
-        }
-    ]
-
   return (
     <section className='doctors-container'>
         <p className='title'>OUR DOCTORS</p>
