@@ -62,16 +62,20 @@
             width: 100%;
             justify-content: center;
         }
+        @include mobile {
+            margin-top: 20px;
+        }
         
         .pic {
-            width: 600px;
-            height: 600px;
+            width: 500px;
+            height: 540px;
+            object-fit: contain;
             @include tab {
                 width: 400px;
                 height: 400px;
             }
             @include mobile {
-                width: 350px;
+                width: 330px;
                 height: 350px;
             }
         }

@@ -14,8 +14,8 @@ const Hero = () => {
       <div className='hero-pic'>
         <LazyLoadImage
           className="pic"
-          src="/assets/images/heropic.png"
-          placeholderSrc="/assets/images/hero-placeholder.png"
+          src="/assets/images/image-one.png"
+          // placeholderSrc="/assets/images/hero-placeholder.png"
           effect="blur"
           alt="doctor image"
         />
