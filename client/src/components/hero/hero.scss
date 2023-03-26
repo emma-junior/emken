@@ -18,9 +18,13 @@
     width: 90%;
     margin: 0 auto;
     padding: 60px 0;
+    overflow-x: hidden;
     @include tab {
         flex-direction: column;
         padding: 100px 0 70px;
+    }
+    @include mobile {
+        width: 100%;
     }
 
     .hero-content {
@@ -30,6 +34,10 @@
         z-index: 1;
         @include tab {
             width: 100%;
+        }
+        @include mobile {
+            width: 90%;
+            margin: auto;
         }
 
         .hero-topic {
