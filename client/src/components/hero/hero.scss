@@ -27,6 +27,7 @@
     	height: 100%;
         margin: auto 0;
         width: 60%;
+        z-index: 1;
         @include tab {
             width: 100%;
         }
@@ -57,6 +58,49 @@
         }
     }
     .hero-pic {
+        position: relative;
+        .floating-content-one{
+            position: absolute;
+            z-index: 1;
+            top: 15%;
+            right: 60%;
+            animation: floatone 10s linear infinite;
+            @include mobile {
+                left: -5%;
+            }
+            @keyframes floatone {
+                0% {
+                    transform: translateX(-20px);
+                }            
+                50% {
+                    transform: translateX(20px);
+                }           
+                100% {
+                    transform: translateX(-20px);
+                }
+            }
+        }
+        .floating-content-two {
+            position: absolute;
+            z-index: 1;
+            top: 35%;
+            right: -2%;
+            animation: floatTwo 10s linear infinite;
+            @include mobile {
+                right: -8%;
+            }
+            @keyframes floatTwo {
+                0% {
+                    transform: translateX(20px);
+                }            
+                50% {
+                    transform: translateX(-20px);
+                }           
+                100% {
+                    transform: translateX(20px);
+                }
+            }
+        }
         @include tab {
             display: flex;
             width: 100%;
@@ -77,6 +121,30 @@
             @include mobile {
                 width: 330px;
                 height: 350px;
+            }
+        }
+        .floating-content-three {
+            position: absolute;
+            z-index: 1;
+            bottom: 0%;
+            right: 0%;
+            animation: floatThree 10s linear infinite;
+            @include mobile {
+                bottom: -10%;
+            }
+
+            @keyframes floatThree {
+                0% {
+                    transform: translateY(-20px);
+                }
+            
+                50% {
+                    transform: translateY(20px);
+                }
+            
+                100% {
+                    transform: translateY(-20px);
+                }
             }
         }
     }

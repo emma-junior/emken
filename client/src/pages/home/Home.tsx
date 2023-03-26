@@ -7,16 +7,20 @@ import Services from '../../components/services/Services'
 import "./home.scss"
 
 const Home = () => {
-  return (  
-    <section className='home'>
-        <div className='nav-hero'>
-          <Navbar />
-          <Hero />
-        </div>
-        <Services />
-        <Features />
-        <Doctors />
-    </section>
+  return (
+    <>
+      <div className="blurry" style={{ top: "5%", right: "0" }}></div>
+      <div className="blurry" style={{ top: "20%", left: "-4rem" }}></div>
+      <section className='home'>
+          <div className='nav-hero'>
+            <Navbar />
+            <Hero />
+          </div>
+          <Services />
+          <Features />
+          <Doctors />
+      </section>
+    </>
   )
 }
 
