@@ -1,34 +1,10 @@
-@import "../../../variables/variables";
-
-@mixin tab {
-    @media (max-width: $tab) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
-
-@mixin background() {
-    background-color: #fff;
-    border: 1px solid rgba(33, 63, 125, 0.06);
-    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    font-size: 15px;
-    color: #525558
-}
-
+@import "../../../styles/mixins";
 .floaters {
-    @include background();
+    @include floatersBackground();
     width: 200px;
     height: 47px;
     border-radius: 30px;
-    @include mobile {
+    @include respondMax("mobile") {
         width: 165px;
         height: 37px;
         font-size: 13px;
@@ -41,12 +17,12 @@
     }
 }
 .floater {
-    @include background();
+    @include floatersBackground();
     width: 200px;
     height: 150px;
     padding: 0px 10px;
     border-radius: 15px;
-    @include mobile {
+    @include respondMax("mobile") {
         width: 170px;
         height: 140px;
     }
@@ -60,7 +36,7 @@
             object-fit: contain;
             border-radius: 50%;
             margin-right: 7px;
-            @include mobile {
+            @include respondMax("mobile") {
                 width: 35px;
                 height: 35px;
             }
@@ -72,7 +48,7 @@
     .review {
         font-size: 13px;
         padding: 5px 0;
-        @include mobile {
+        @include respondMax("mobile") {
             font-size: 12px;
             padding: 3px 0;
         }

@@ -1,26 +1,14 @@
-@import "../../variables/variables";
-
-@mixin tab {
-    @media (max-width: $tab) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
+@import "../../styles/mixins";
 
 .doctors-container {
     margin: 60px auto;
     width: 75%;
     
-        @include tab {
+        @include respondMax("tablet") {
             width: 95%;
         }
     
-        @include mobile {
+        @include respondMax("mobile") {
             width: 85%;
         }
 
@@ -32,7 +20,7 @@
     .meet {
         text-align: center;
         font-size: 27px;
-        @include mobile {
+        @include respondMax("mobile") {
             font-size: 23px;
         }
         font-family: 'Roboto Slab', serif;
@@ -47,7 +35,7 @@
         justify-content: space-between;
         margin: 50px auto;
         
-        @include mobile {
+        @include respondMax("mobile") {
             flex-direction: column;
             justify-content: center;
         }

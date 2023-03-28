@@ -1,31 +1,11 @@
-@import "../../variables/variables";
-
-@mixin tab {
-    @media (max-width: $tab) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
-
-@mixin center($height) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: $height;
-}
+@import "../../styles/mixins";
 
 .container {
     width: 55%;
-    @include tab {
+    @include respondMax("tablet") {
         width: 95%;
     }
-    @include mobile {
+        @include respondMax("mobile") {
         width: 90%;
     }
     margin: 80px auto;
@@ -48,10 +28,10 @@
         display: flex;
         justify-content: space-between;
         margin: 50px 0 20px;
-        @include tab {
+        @include respondMax("tablet") {
             flex-wrap: wrap;
         }
-        @include mobile {
+        @include respondMax("mobile") {
             flex-direction: column;
             align-items: center;
         }
