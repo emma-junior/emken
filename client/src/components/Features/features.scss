@@ -1,16 +1,4 @@
-@import "../../variables/variables";
-
-@mixin tab {
-    @media (max-width: $tab) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
+@import "../../styles/mixins";
 
 .section-container {
     display: flex;
@@ -19,11 +7,11 @@
     margin: 0 auto;
     padding: 35px 0;
     
-    @include tab {
+    @include respondMax("tablet") {
         width: 90%;
         padding: 15px 0;
     }
-    @include mobile {
+    @include respondMax("mobile") {
         flex-direction: column-reverse;
         width: 90%;
         padding: 10px 0 50px;
@@ -33,10 +21,10 @@
         height: 400px;
         object-fit: contain;
         mix-blend-mode: color-burn;
-        @include tab {
+        @include respondMax("tablet") {
             width: 330px;
         }
-        @include mobile {
+        @include respondMax("mobile") {
             width: 300px;
             height: 300px;
             margin: 8px auto;
@@ -46,10 +34,7 @@
         width: 44%;
         height: 100%;
         margin: auto 0;
-        @include mobile {
-            width: 45%;
-        }
-        @include mobile {
+        @include respondMax("mobile") {
             width: 100%;
         }
 
@@ -79,7 +64,7 @@
 .section-container:nth-of-type(even) {
     direction: rtl;
 
-    @include mobile {
+    @include respondMax("mobile") {
         direction: ltr;
         }
 }

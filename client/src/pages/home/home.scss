@@ -1,16 +1,4 @@
-@import "../../variables/variables";
-
-@mixin tab {
-    @media (max-width: $tab) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
+@import "../../styles/mixins";
 
 .blurry {
     position: absolute;
@@ -19,7 +7,7 @@
     border-radius: 50%;
     background: #faf7e9;
     filter: blur(120px);
-    @include tab {
+    @include respondMax("tablet") {
         width: 3rem;
         height: 6rem;
     }

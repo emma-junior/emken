@@ -1,48 +1,23 @@
-@import "../../variables/variables";
+@import "../../styles/mixins";
 
-@mixin tab {
-    @media (max-width: $tab) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
-
-@mixin icon($color) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 auto;
-    color: $color;
-}
 .card-container {
     width: 220px;
     background-color: #f9fafb;
     padding: 20px 15px;
     border-radius: 12px;
-    @include mobile {
+    @include respondMax("mobile") {
         margin: 10px 0;
         padding: 30px 15px;
     }
 
     .red {
-        @include icon(#fe9291);
-        background: #ffdddc;
+        @include iconBg(#fe9291, #ffdddc);
     }
     .green {
-        @include icon(#3aa79d);
-        background: #dffbf1;
+        @include iconBg(#3aa79d, #dffbf1);
     }
     .blue {
-        @include icon(#5c9cfb);
-        background: #ddebfc;
+        @include iconBg(#5c9cfb, #ddebfc);
     }
     .title {
         text-align: center;

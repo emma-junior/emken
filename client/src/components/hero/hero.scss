@@ -1,17 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
-@import "../../variables/variables";
-
-@mixin tab {
-    @media (max-width: $tab) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
+@import "../../styles/mixins";
 
 .hero {
     display: flex;
@@ -19,11 +6,11 @@
     margin: 0 auto;
     padding: 60px 0;
     overflow-x: hidden;
-    @include tab {
+    @include respondMax("tablet") {
         flex-direction: column;
         padding: 100px 0 70px;
     }
-    @include mobile {
+    @include respondMax("mobile") {
         width: 100%;
     }
 
@@ -32,10 +19,10 @@
         margin: auto 0;
         width: 60%;
         z-index: 1;
-        @include tab {
+        @include respondMax("tablet") {
             width: 100%;
         }
-        @include mobile {
+        @include respondMax("mobile") {
             width: 90%;
             margin: auto;
         }
@@ -46,10 +33,10 @@
             line-height: 1.5;
             color: #1f3e72;
             letter-spacing: 2px;
-            @include tab {
+            @include respondMax("tablet") {
                 font-size: 32px;
             }
-            @include mobile {
+            @include respondMax("mobile") {
                 font-size: 27px;
             }
         }
@@ -59,7 +46,7 @@
         button {
             width: 130px;
             height: 45px;
-            @include tab {
+            @include respondMax("tablet") {
                 width: 140px;
                 font-size: 16px;
             }          
@@ -73,7 +60,7 @@
             top: 15%;
             right: 60%;
             animation: floatone 10s linear infinite;
-            @include mobile {
+            @include respondMax("mobile") {
                 left: -5%;
             }
             @keyframes floatone {
@@ -94,7 +81,7 @@
             top: 35%;
             right: -2%;
             animation: floatTwo 10s linear infinite;
-            @include mobile {
+            @include respondMax("mobile") {
                 right: -8%;
             }
             @keyframes floatTwo {
@@ -109,12 +96,12 @@
                 }
             }
         }
-        @include tab {
+        @include respondMax("tablet") {
             display: flex;
             width: 100%;
             justify-content: center;
         }
-        @include mobile {
+        @include respondMax("mobile") {
             margin-top: 20px;
         }
         
@@ -122,11 +109,11 @@
             width: 500px;
             height: 540px;
             object-fit: contain;
-            @include tab {
+            @include respondMax("tablet") {
                 width: 400px;
                 height: 400px;
             }
-            @include mobile {
+            @include respondMax("mobile") {
                 width: 330px;
                 height: 350px;
             }
@@ -137,7 +124,7 @@
             bottom: 0%;
             right: 0%;
             animation: floatThree 10s linear infinite;
-            @include mobile {
+            @include respondMax("mobile") {
                 bottom: -10%;
             }
 
