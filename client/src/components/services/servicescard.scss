@@ -1,15 +1,6 @@
 @import "../../styles/mixins";
 
-.card-container {
-    width: 220px;
-    background-color: #f9fafb;
-    padding: 20px 15px;
-    border-radius: 12px;
-    @include respondMax("mobile") {
-        margin: 10px 0;
-        padding: 30px 15px;
-    }
-
+.card-container {    
     .red {
         @include iconBg(#fe9291, #ffdddc);
     }
