@@ -81,7 +81,12 @@
             top: 35%;
             right: -2%;
             animation: floatTwo 10s linear infinite;
+            @include respondMax("lg-tablet") {
+                top: 25%;
+                right: 10%;
+            }
             @include respondMax("mobile") {
+                top: 35%;
                 right: -8%;
             }
             @keyframes floatTwo {
@@ -124,7 +129,11 @@
             bottom: 0%;
             right: 0%;
             animation: floatThree 10s linear infinite;
+            @include respondMax("lg-tablet") {
+                right: 10%;
+            }
             @include respondMax("mobile") {
+                right: 0%;
                 bottom: -10%;
             }
 
