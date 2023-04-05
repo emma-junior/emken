@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import Button from '../button/Button';
 import "./navbar.scss"
 import {FaBars, FaTimes} from "react-icons/fa"
+import Logo from '../logo/Logo';
 
 const Navbar = () => {
     const [color, setColor] = useState<boolean>(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
   return (
     <nav className={color ? 'navbar navbar-bg' : 'navbar'}>
         <div className='navbar-wrapper'>
-            <h3>EMKEN</h3>
+            <Logo />
             <div className={click ? 'show-sidebar' : 'nav-links'}>
                 <ul>
                     <li>HOME</li>
