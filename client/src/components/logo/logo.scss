@@ -1,0 +1,14 @@
+.logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: #2379f9;
+    font-size: 21px;
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+    .logo-icon {
+        margin-right: 5px;
+    }
+}
