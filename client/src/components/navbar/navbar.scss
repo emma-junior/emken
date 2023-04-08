@@ -68,12 +68,9 @@
                         color: #0d65e9;
                     }
                 }
-                button {
-                    width: 100px;
-                    height: 40px;
+                .login-btn-wrapper {
                     @include respondMax("tablet") {
-                        height: 75px;
-                        margin: 0 auto;
+                        margin: 10px auto;
                     }
                 }
             }          

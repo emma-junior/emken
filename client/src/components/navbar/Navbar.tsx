@@ -34,7 +34,7 @@ const Navbar = () => {
                 </ul>
                 <div className='signup-login'>
                     <p className='signup'>Sign Up</p>
-                    <Button text="Log In" />
+                    <div className='login-btn-wrapper'><Button size = 'medium' label="Log In" /></div>
                 </div>
             </div>
             <div className='mobile-icon' onClick={handleClick}>
