@@ -22,7 +22,7 @@ const Features = () => {
               <p className='topic'>{item.topic}</p>
               <h2 className='headline'>{item.headline}</h2>
               <p className='info'>{item.info}</p>
-              <Button text={item.text} />
+              <Button size = 'medium' label={item.text} />
           </div>
         </div>
       ))}

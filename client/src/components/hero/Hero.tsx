@@ -10,7 +10,7 @@ const Hero = () => {
       <div className='hero-content'>
         <h1 className='hero-topic'>THE BEST RELIABLE MEDICAL EMERGENCY SERVICE IN YOUR HANDS</h1>
         <p>Dedicated to helping you with all medical issues/emergency 24/7</p>
-        <Button text="Get Started" />
+        <Button size = 'medium' label="Get Started" />
       </div>
       <div className='hero-pic'>
         <div className='floating-content-one'><FloaterOne /></div>

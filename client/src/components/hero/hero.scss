@@ -43,14 +43,6 @@
         p {
             margin: 10px 0 30px;
         }
-        button {
-            width: 130px;
-            height: 45px;
-            @include respondMax("tablet") {
-                width: 140px;
-                font-size: 16px;
-            }          
-        }
     }
     .hero-pic {
         position: relative;
