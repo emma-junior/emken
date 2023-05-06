@@ -1,0 +1,44 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.card-container { 
+    width: 220px;
+    background-color: #f9fafb;
+    padding: 20px 15px;
+    border-radius: 12px;
+    transition-duration: 2s;
+    
+    @include respondMax("mobile") {
+        margin: 10px 0;
+        padding: 30px 15px;
+    }
+    &:nth-child(2) {
+        transition-delay: .5s;
+    }
+    
+    &:nth-child(3) {
+        transition-delay: 1s;
+    }
+
+    .red {
+        @include iconBg(#fe9291, #ffdddc);
+    }
+    .green {
+        @include iconBg(#3aa79d, #dffbf1);
+    }
+    .blue {
+        @include iconBg(#5c9cfb, #ddebfc);
+    }
+    .title {
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Roboto Slab', serif;
+        color: $col-primary;
+        margin: 16px 0;
+    }
+    .info {
+        text-align: center;
+        font-size: 14px;
+        color: $col-primary;
+    }
+}

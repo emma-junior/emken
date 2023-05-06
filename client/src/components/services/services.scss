@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 @import "../../styles/mixins";
 
 .container {
@@ -11,7 +12,7 @@
     margin: 80px auto;
 
     .services {
-        color: #fe5252;
+        color: $col-red;
         font-weight: 700;
         text-align: center;
     }
@@ -20,7 +21,7 @@
         font-size: 27px;
         font-family: 'Roboto Slab', serif;
         font-weight: 600;
-        color: #1f3e72;
+        color: $col-primary;
         letter-spacing: 2px;
         margin: 7px 0;
     }
@@ -37,22 +38,5 @@
             align-items: center;
         }
 
-        .cardAnimate {
-            width: 220px;
-            background-color: #f9fafb;
-            padding: 20px 15px;
-            border-radius: 12px;
-            transition-duration: 2s;           
-            @include respondMax("mobile") {
-                margin: 10px 0;
-                padding: 30px 15px;
-            }
-        }
-        .cardAnimate:nth-child(2) {
-            transition-delay: .5s;
-        }
-        .cardAnimate:nth-child(3) {
-            transition-delay: 1s;
-        }
     }
 }

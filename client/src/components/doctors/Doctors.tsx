@@ -1,6 +1,6 @@
 import React from 'react'
 import { doctors } from '../../data/doctors'
-import DoctorCard from './DoctorCard'
+import DoctorCard from '../doctorcard/DoctorCard'
 import "./doctors.scss"
 
 const Doctors = () => {
