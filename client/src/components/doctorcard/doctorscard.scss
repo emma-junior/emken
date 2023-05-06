@@ -1,17 +1,5 @@
+@import "../../styles/variables";
 @import "../../styles/mixins";
-// @import "../../variables/variables";
-
-// @mixin tab {
-//     @media (max-width: $tab) {
-//         @content;
-//     }
-// }
-
-// @mixin mobile {
-//     @media (max-width: $mobile) {
-//         @content;
-//     }
-// }
 
 .card {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;

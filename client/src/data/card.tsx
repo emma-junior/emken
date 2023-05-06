@@ -1,6 +1,6 @@
 import {FaBriefcaseMedical, FaRegHospital, FaCommentMedical} from "react-icons/fa"
 
-export interface servicesType {
+export interface cardType {
     id: number,
     icon: JSX.Element,
     iconcolor: string,
@@ -8,7 +8,7 @@ export interface servicesType {
     info: string
 }
 
-export const services:servicesType[] = [
+export const cardcontent:cardType[] = [
         {
             id: 1,
             icon: <FaBriefcaseMedical />,

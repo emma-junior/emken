@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 @import "../../styles/mixins";
 
 .section-container {
@@ -39,20 +40,20 @@
         }
 
         .topic {
-            color: #fe5252;
+            color: $col-red;
             font-weight: 700;
         }
         .headline {
             font-size: 25px;
             font-family: 'Roboto Slab', serif;
             font-weight: 600;
-            color: #1f3e72;
+            color: $col-primary;
             letter-spacing: 2px;
             margin: 7px 0;
         }
         .info {
             font-size: 15px;
-            color: #838fa5;
+            color: $col-primary;
             margin: 20px 0;
         }
     }

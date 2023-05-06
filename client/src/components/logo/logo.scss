@@ -1,8 +1,11 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .logo {
     display: flex;
     height: 100%;
     align-items: center;
-    color: #2379f9;
+    color: $col-secondary;
     font-size: 21px;
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 2px;

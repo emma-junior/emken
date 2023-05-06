@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 @import "../../styles/mixins";
 
 .doctors-container {
@@ -13,7 +14,7 @@
         }
 
     .title {
-        color: #fe5252;
+        color: $col-red;
         font-weight: 700;
         text-align: center;
     }
@@ -25,7 +26,7 @@
         }
         font-family: 'Roboto Slab', serif;
         font-weight: 600;
-        color: #1f3e72;
+        color: $col-primary;
         letter-spacing: 2px;
         margin: 7px 0;
     }
