@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.stats {
+    background: #3172D5;
+    width: 100%;
+    padding: 60px 0;
+
+    .stats-wrapper {
+        display: flex;
+        color: $col-white;
+        width: 65%;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        p {
+            text-align: center;
+
+            &:nth-child(1) {
+                font-size: 30px;
+                font-weight: 700;
+            }
+            &:last-child {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
