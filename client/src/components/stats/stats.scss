@@ -12,16 +12,28 @@
         width: 65%;
         margin: 0 auto;
         justify-content: space-between;
+        @include respondMax("tablet") {
+            width: 80%;
+        }
+        @include respondMax("mobile") {
+            flex-direction: column;
+        }
 
-        p {
-            text-align: center;
-
-            &:nth-child(1) {
-                font-size: 30px;
-                font-weight: 700;
+        div {
+            @include respondMax("mobile") {
+                padding: 10px 0;
             }
-            &:last-child {
-                font-size: 18px;
+
+            p {
+                text-align: center;
+    
+                &:nth-child(1) {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+                &:last-child {
+                    font-size: 18px;
+                }
             }
         }
     }
