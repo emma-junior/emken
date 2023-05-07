@@ -32,7 +32,7 @@ const HomeCard = ({content}: Props) => {
 
   return (
     <motion.div ref={ref} className='card-container' animate={animation}>
-        <div className={content.iconcolor}><p className='icon'>{content.icon}</p></div>
+        <div className={content.iconcolor}><p className=''>{content.icon}</p></div>
         <p className='title'>{content.title}</p>
         <p className='info'>{content.info}</p>
     </motion.div>

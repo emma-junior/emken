@@ -22,12 +22,21 @@
 
     .red {
         @include iconBg(#fe9291, #ffdddc);
+        p {
+            color: #fe9291;
+        }
     }
     .green {
         @include iconBg(#3aa79d, #dffbf1);
+        p {
+            color: #3aa79d;
+        }
     }
     .blue {
         @include iconBg(#5c9cfb, #ddebfc);
+        p {
+            color: #5c9cfb;
+        }
     }
     .title {
         text-align: center;
