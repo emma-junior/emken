@@ -5,6 +5,7 @@ import Hero from '../../components/hero/Hero'
 import Navbar from '../../components/navbar/Navbar'
 import Services from '../../components/services/Services'
 import "./home.scss"
+import ChooseUs from '../../components/chooseUs/ChooseUs'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
           <Services />
           <Features />
           <Doctors />
+          <ChooseUs />
       </section>
     </>
   )
