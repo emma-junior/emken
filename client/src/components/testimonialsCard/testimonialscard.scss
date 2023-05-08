@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.testimonialcard {
+    // width: 320px;
+    background-color: $col-white;
+    margin: 10px;
+    color: $col-primary;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .name {
+        font-weight: 800;
+        padding: 10px 0;
+    }
+    .comment {
+        font-size: 15px;
+    }
+}

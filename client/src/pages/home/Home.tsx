@@ -7,6 +7,7 @@ import Services from '../../components/services/Services'
 import "./home.scss"
 import ChooseUs from '../../components/chooseUs/ChooseUs'
 import Stats from '../../components/stats/Stats'
+import Testimonials from '../../components/testmonials/Testimonials'
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
           <Doctors />
           <ChooseUs />
           <Stats />
+          <Testimonials />
       </section>
     </>
   )
