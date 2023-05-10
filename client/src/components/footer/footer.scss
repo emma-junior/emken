@@ -1,0 +1,102 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.footer {
+    color: $col-primary;
+    width: 75%;
+    margin: 0 auto;
+    @include respondMax("tablet") {
+        width: 95%;
+    }
+    @include respondMax("mobile") {
+        width: 85%;
+    }
+
+    .footer_wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        @include respondMax("mobile") {
+            flex-direction: column;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            @include respondMax("tablet") {
+                font-size: 16px;
+            }
+        }       
+        p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    
+        .logo-socials {
+            width: 27%;
+            @include respondMax("mobile") {
+                width: 100%;
+            }
+
+            .socials {
+                display: flex;
+
+                .icon {
+                    @include center(30px, 30px);
+                    @include respondMax("tablet") {
+                        @include center(25px, 25px);
+                    }
+                    background: transparent;
+                    color: $col-secondary;
+                    border-radius: 50%;
+                    border: 1px solid $col-secondary;
+                    margin: 2px 4px;
+                }
+            }
+        }
+        .about-help {
+            display: flex;
+            width: 40%;
+            justify-content: space-around;
+
+            @include respondMax("mobile") {
+                justify-content: flex-start;
+                width: 100%;
+                margin: 10px 0;
+            }
+            .about {
+                margin-right: 10px;
+            }
+           
+        }
+        .subscribe {
+            input {
+                width: 90%;
+                height: 40px;
+                text-indent: 1.5rem;
+                border-radius: 20px;
+                outline: none;
+                border: 1px $col-primary solid
+            }
+            button {
+                width: 90%;
+                height: 40px;
+                border-radius: 20px;
+                background: $col-secondary;
+                color: $col-white;
+                border: none;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    hr{
+        margin: 30px 0;
+    }
+    .license {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
