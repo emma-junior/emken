@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.login {
+    width: 85%;
+    margin: 0 auto;
+    &_wrapper{
+        display: flex;
+        justify-content: space-between;
+        &_image {
+            display: flex;
+            height: 95vh;
+            align-items: center;
+            img {
+                width: 450px;
+            }
+        }
+        .formwrapper {
+            &_top {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 25px;
+
+                &_p {
+                    margin: auto 6px;
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+            }
+            &_wrapper {
+                @include center(90vh, 90vh);
+                &_form {                   
+                    width: 65%;
+                    h2 {
+                        font-size: 30px;
+                    }
+                    &_p {
+                        font-size: 14px;
+                        margin: 10px 0;
+                    }
+
+                    &_input {
+                        display: flex;
+                        flex-direction: column;
+
+                        label {
+                            font-size: 14px;
+                        }
+                        input {
+                            margin: 5px 0;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
