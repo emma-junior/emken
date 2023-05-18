@@ -7,9 +7,10 @@
     &_wrapper{
         display: flex;
         justify-content: space-between;
+        color: $col-primary;
         &_image {
             display: flex;
-            height: 95vh;
+            height: 100vh;
             align-items: center;
             img {
                 width: 450px;
@@ -22,7 +23,7 @@
                 margin-top: 25px;
 
                 &_p {
-                    margin: auto 6px;
+                    margin: auto 8px;
                     font-size: 15px;
                     font-weight: 700;
                 }
@@ -42,13 +43,97 @@
                     &_input {
                         display: flex;
                         flex-direction: column;
+                        margin: 10px 0;
 
                         label {
                             font-size: 14px;
+                            color: #989daa;
                         }
                         input {
-                            margin: 5px 0;
-                            height: 30px;
+                            margin:5px 0;
+                            height: 35px;
+                            background: #F4F6FF;
+                            border: none;
+                            text-indent: 1rem;
+                            border-radius: 3px;
+                        }
+                        input:focus {
+                            outline: 2px solid #BBC9DE;
+                        }
+                    }
+                    .password {
+                        position: relative;
+
+                        .shown-password {
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            width: 10%;
+                            font-size: 1.5rem;
+                            height: 100%;
+                            cursor: pointer;
+                            color: rgb(179, 179, 179);
+                            background-color: transparent;
+                            border: none;
+                            transition: .5s all ease;
+                            transform: translateY(-10%);
+                        }
+                        
+                        .shown-password:hover {
+                            color: rgb(148, 148, 148);
+                        }
+                    }
+                    &_forgot {
+                        display: flex;
+                        justify-content: flex-end;
+                        font-size: 14px;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                    &_btn {
+                        width: 100%;
+                        height: 40px;
+                        border-radius: 5px;
+                        background: $col-secondary;
+                        color: $col-white;
+                        border: none;
+                        margin: 20px 0;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #7cadf7;
+                        }
+                    }
+                    &_alternative {
+                        font-weight: 600;
+                        &_p {
+                            text-align: center;
+                            color: #989daa;
+                            margin: 10px auto;
+                            font-size: 14px;
+                        }
+                        &_signin {
+                            display: flex;
+                            width: 90%;
+                            margin: 0 auto;
+                            justify-content: space-between;
+    
+                            &_google, &_facebook {
+                                display: flex;
+                                align-items: center;
+                                background: #f8f9ff;
+                                padding: 10px 30px;
+                                cursor: pointer;
+                                border-radius: 5px;
+                                font-size: 14px;
+
+                                &:hover {
+                                    background: #d6d8e0;
+                                }
+                                .icon {
+                                    margin-right: 7px;
+                                }
+                            }
                         }
                     }
                 }
