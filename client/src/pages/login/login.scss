@@ -4,34 +4,60 @@
 .login {
     width: 85%;
     margin: 0 auto;
+    @include respondMax("mobile") {
+        width: 95%;
+    }
+    &_top {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 25px;
+    
+        &_p {
+            margin: auto 10px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
     &_wrapper{
         display: flex;
         justify-content: space-between;
         color: $col-primary;
+        @include respondMax("tablet") {
+            flex-direction: column;
+        }
+        
         &_image {
             display: flex;
-            height: 100vh;
+            height: 95vh;
             align-items: center;
+            @include respondMax("tablet") {
+                height: 100%;
+                margin: 50px auto;
+            }
             img {
                 width: 450px;
+                @include respondMax("mobile") {
+                    width: 320px;
+                }
             }
         }
         .formwrapper {
-            &_top {
-                display: flex;
-                justify-content: flex-end;
-                margin-top: 25px;
-
-                &_p {
-                    margin: auto 8px;
-                    font-size: 15px;
-                    font-weight: 700;
-                }
+            @include respondMax("mobile") {
+                margin: 15px auto;
             }
             &_wrapper {
                 @include center(90vh, 90vh);
+                @include respondMax("tablet") {
+                    @include center(100%, 100%);
+                }
                 &_form {                   
                     width: 65%;
+                    @include respondMax("tablet") {
+                        width: 70%;
+                    }
+                    @include respondMax("mobile") {
+                        width: 85%;
+                    }
                     h2 {
                         font-size: 30px;
                     }
@@ -51,11 +77,12 @@
                         }
                         input {
                             margin:5px 0;
-                            height: 35px;
+                            height: 40px;
                             background: #F4F6FF;
                             border: none;
                             text-indent: 1rem;
                             border-radius: 3px;
+                            width: 100%;
                         }
                         input:focus {
                             outline: 2px solid #BBC9DE;

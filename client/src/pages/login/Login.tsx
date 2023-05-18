@@ -15,13 +15,13 @@ const Login = () => {
     }
   return (
     <main className='login'>
+        <div className='login_top'>
+            <p className='login_top_p'>New to EMKEN?</p>
+            <Button size = 'large' label="Sign Up" />
+        </div>
         <div className='login_wrapper'>
             <figure className='login_wrapper_image'><img src='/assets/images/doc-illustration.png' alt='treatment' /></figure>
             <div className='formwrapper'>
-                <div className='formwrapper_top'>
-                    <p className='formwrapper_top_p'>New to EMKEN?</p>
-                    <Button size = 'large' label="Sign Up" />
-                </div>
                 <section className='formwrapper_wrapper'>
                     <form className='formwrapper_wrapper_form'>
                         <h2>Welcome Back to EMKEN!</h2>
