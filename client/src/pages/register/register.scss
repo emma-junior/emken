@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.register {
+    display: flex;
+    overflow: hidden;
+    .form {
+        @include center(50vw, 80vh);
+    
+    }
+    .reg-image {
+        width: 60%;
+        height: 100vh;
+    }
+}

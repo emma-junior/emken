@@ -1,11 +1,40 @@
-import React,{useState} from 'react'
+import React,{useState, FormEvent, useContext} from 'react'
 import "./login.scss"
 import Button from '../../components/button/Button'
 import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai"
 import {FcGoogle} from "react-icons/fc"
 import {FaFacebookSquare} from "react-icons/fa"
+import {app, database} from '../../firebaseConfig'
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
+import { useNavigate } from 'react-router'
+import { AuthContext } from '../../context/AuthContext'
 
 const Login = () => {
+    const auth = getAuth(app)
+    const [data, setData] = useState<any>({
+        email: '',
+        password: ''
+    })
+    const {dispatch} = useContext(AuthContext)
+    const navigate = useNavigate()
+    const handleInput = (event:any) => {
+        let newInput = { [event.target.name]: event.target.value};
+
+        setData({...data, ...newInput})
+    }
+    const handleSubmit = (e:FormEvent) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, data.email, data.password)
+        .then((response) => {
+            const user = response.user
+            dispatch({type:"LOGIN", payload:user})
+            navigate("/")
+        })
+        .catch((err) => {
+            alert(err.message)
+        })
+    }   
+
     const [visible, setVisible] = useState<boolean>(false)
     const [input, setInput] = useState<string>("password")
 
@@ -28,19 +57,15 @@ const Login = () => {
                         <p className='formwrapper_wrapper_form_p'>Welcome to your medical platform. Please sign in back to get full access to services</p>
                         <div className='formwrapper_wrapper_form_input'>
                             <label>Email</label>
-                            <input 
-                                type="email" 
-                            />
+                            <input name='email' placeholder='email' type='email' onChange={(event) => handleInput(event)} />
                         </div>
                         <div className='formwrapper_wrapper_form_input password'>
                             <label>Password</label>
-                            <input 
-                                type={input}
-                            />
+                            <input name='password' placeholder='password' type={input} onChange={(event) => handleInput(event)} />
                             {visible ? <p onClick={togglePassword} className='shown-password'><AiOutlineEye /></p>: <p onClick={togglePassword} className='shown-password'><AiOutlineEyeInvisible /></p>}
                         </div>
                         <p className='formwrapper_wrapper_form_forgot'>Forgot password?</p>
-                        <button className='formwrapper_wrapper_form_btn'>Sign In Now</button>
+                        <button onClick={handleSubmit} className='formwrapper_wrapper_form_btn'>Sign In Now</button>
                         <div className='formwrapper_wrapper_form_alternative'>
                             <p className='formwrapper_wrapper_form_alternative_p'>Or Continue With</p>
                             <div className='formwrapper_wrapper_form_alternative_signin'>

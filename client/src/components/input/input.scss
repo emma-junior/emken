@@ -1,0 +1,59 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.input-wrapper {
+    height: 60px;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+
+    input {
+        width: 100%;
+        height: 100%;
+        color: 1px solid $col-secondary;
+        padding-top: 20px;
+        outline: none;
+        border: none;
+
+        &:focus+.label-name .content-name,
+        input:valid+.label-name .content-name {
+            transform: translateY(-150%);
+            font-size: 14px;
+            color: $col-secondary;
+        }
+
+        &:focus+.label-name::after,
+        input:valid+.label-name:after {
+            transform: translateX(0%);
+        }
+    }
+
+    label {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 1px solid black;
+
+        .content-name {
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            transition: all 0.3s ease;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            border-bottom: 3px solid $col-secondary;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+    }
+}
