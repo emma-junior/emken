@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Home from './pages/home/Home';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import Chat from './pages/chat/Chat';
+import { AuthContext } from './context/AuthContext';
 
 function App() {
+   const {currentUser} = useContext(AuthContext)
+
+  const RequireAuth = ({children}:any) => {
+    return currentUser ? children : <Navigate to="/login" />;
+  };
   return (
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Register />} />
+          <Route path='chat' element={<RequireAuth><Chat /></RequireAuth>} />
         </Routes>
       </Router>    
   );

@@ -1,8 +1,10 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState, useEffect, useContext} from 'react'
 import Button from '../button/Button';
 import "./navbar.scss"
 import {FaBars, FaTimes} from "react-icons/fa"
+import { Link } from 'react-router-dom';
 import Logo from '../logo/Logo';
+import { AuthContext } from '../../context/AuthContext';
 
 const Navbar = () => {
     const [color, setColor] = useState<boolean>(false);
@@ -15,6 +17,12 @@ const Navbar = () => {
             setColor(false);
         }
     };
+
+    const {currentUser, dispatch} = useContext(AuthContext)
+    const logOut = () => {
+        dispatch({type:"LOGIN"})
+    }
+
 
     const handleClick = () => setClick(!click)
 
@@ -30,12 +38,14 @@ const Navbar = () => {
                     <li>HOME</li>
                     <li>MEDICAL EMERGENCY</li>
                     <li>FIND HOSPITAL</li>
-                    <li>CHAT WITH DOCTOR</li>
+                    <Link to="/chat"><li>CHAT WITH DOCTOR</li></Link>
                 </ul>
-                <div className='signup-login'>
+                {currentUser ? <div><div onClick={logOut} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div></div>
+                :<div className='signup-login'>
                     <p className='signup'>Sign Up</p>
-                    <div className='login-btn-wrapper'><Button size = 'medium' label="Log In" /></div>
+                    <Link to="/login"><div className='login-btn-wrapper'><Button size = 'medium' label="Log In" /></div></Link>
                 </div>
+                }
             </div>
             <div className='mobile-icon' onClick={handleClick}>
                 {!click ?  <FaBars /> : <FaTimes />}
