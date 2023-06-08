@@ -3,6 +3,7 @@ import {app, database} from '../../firebaseConfig'
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth"
 import "./register.scss"
 import Input from '../../components/input/Input'
+import Logo from '../../components/logo/Logo'
 
 const Register = () => {
     const auth = getAuth(app)
@@ -27,14 +28,17 @@ const Register = () => {
     }   
   return (
     <div className='register'>
-        <div className='form'>
+        <div className='register_form'>
+            <div><Logo /></div>
             <Input name="email" handleInput={handleInput}  />
             <Input name='password' handleInput={handleInput}/>
             <br />
-            <button onClick={handleSubmit}>Submit</button>
+            <button className='register_form_loginbtn' onClick={handleSubmit}>REGISTER</button>
+            <button className='register_form_login-google'>REGISTER WITH GOOGLE</button>
         </div>
-        <figure className='reg-image'>
-            <img src='/assets/images/reg-image.jpg' alt='register' />
+        <figure className='register_image'>
+                <img src='/assets/images/reg-image.jpg' alt='register' />
+                <div className='overlay'></div>
         </figure>      
     </div>
   )
