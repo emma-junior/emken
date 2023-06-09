@@ -38,12 +38,12 @@ const Navbar = () => {
                     <li>HOME</li>
                     <li>MEDICAL EMERGENCY</li>
                     <li>FIND HOSPITAL</li>
-                    <Link to="/chat"><li>CHAT WITH DOCTOR</li></Link>
+                    <li><Link to="/chat">CHAT WITH DOCTOR</Link></li>
                 </ul>
                 {currentUser ? <div><div onClick={logOut} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div></div>
                 :<div className='signup-login'>
                     <p className='signup'>Sign Up</p>
-                    <Link to="/login"><div className='login-btn-wrapper'><Button size = 'medium' label="Log In" /></div></Link>
+                    <div className='login-btn-wrapper'><Link to="/login"><Button size = 'medium' label="Log In" /></Link></div>
                 </div>
                 }
             </div>
