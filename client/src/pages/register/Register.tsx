@@ -27,20 +27,21 @@ const Register = () => {
         })
     }   
   return (
-    <div className='register'>
+    <section className='register'>
         <div className='register_form'>
             <div><Logo /></div>
-            <Input name="email" handleInput={handleInput}  />
-            <Input name='password' handleInput={handleInput}/>
+            <div className='register_form_input'><Input name="email" handleInput={handleInput}  /></div>
+            <div className='register_form_input'><Input name='password' handleInput={handleInput}/></div>
             <br />
-            <button className='register_form_loginbtn' onClick={handleSubmit}>REGISTER</button>
-            <button className='register_form_login-google'>REGISTER WITH GOOGLE</button>
+            <button className='register_form_loginbtn' onClick={handleSubmit}>SIGN UP</button>
+            <button className='register_form_login-google'>SIGN UP WITH GOOGLE</button>
         </div>
         <figure className='register_image'>
-                <img src='/assets/images/reg-image.jpg' alt='register' />
-                <div className='overlay'></div>
+            <img src='/assets/images/reg-image.jpg' alt='register' />
+            <h1 className='quote'>When medical emergencies strike, bravery and compassion become our guiding lights.</h1>
+            <div className='overlay'></div>
         </figure>      
-    </div>
+    </section>
   )
 }
 
