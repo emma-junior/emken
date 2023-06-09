@@ -4,7 +4,10 @@
 .stats {
     background: #3172D5;
     width: 100%;
-    padding: 60px 0;
+    padding: 90px 0;
+    @include respondMax("mobile") {
+        padding: 60px 0;
+    }
 
     .stats-wrapper {
         display: flex;
@@ -28,8 +31,11 @@
                 text-align: center;
     
                 &:nth-child(1) {
-                    font-size: 30px;
+                    font-size: 40px;
                     font-weight: 700;
+                    @include respondMax("mobile") {
+                        font-size: 30px;
+                    }
                 }
                 &:last-child {
                     font-size: 18px;
