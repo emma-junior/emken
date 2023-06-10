@@ -59,6 +59,12 @@
                 color: $col-secondary;
                 border: 2px solid $col-secondary;
             }
+            @include respondMax("tablet") {
+                &:hover {
+                    background: $col-secondary;
+                    color: $col-white;
+                }
+            }
         }
     }
 }
