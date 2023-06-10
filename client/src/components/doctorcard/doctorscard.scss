@@ -3,14 +3,14 @@
 
 .card {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-    max-width: 300px;
+    width: 300px;
     border-radius: 20px;
     @include respondMax("tablet") {
-        max-width: 230px;
+        width: 230px;
     }
     
     @include respondMax("mobile") {
-        max-width: 85%;
+        width: 85%;
         margin: 10px auto;
     }
     .doctor-pic {
