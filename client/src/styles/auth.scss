@@ -1,24 +1,26 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
+@import "./variables";
+@import "./mixins";
 
-.register {
+.auth {
     display: flex;
     overflow: hidden;
-    @include respondMax("tablet") {
-        flex-direction: column-reverse;
-    }
+
     &_form {
         @include center(40%, 90vh);
+
         @include respondMax("tablet") {
             @include center(100%, 100%);
             margin: 50px auto
         }
+
         &_input {
             width: 50%;
+
             @include respondMax("mobile") {
                 width: 80%;
             }
         }
+
         &_loginbtn {
             @include center(47%, 35px);
             border-radius: 20px;
@@ -26,10 +28,12 @@
             border: 1px solid #e9ece9;
             cursor: pointer;
             margin: 10px auto;
+
             @include respondMax("tablet") {
                 @include center(47%, 50px);
                 border-radius: 25px;
             }
+
             @include respondMax("mobile") {
                 @include center(75%, 35px);
             }
@@ -38,6 +42,7 @@
                 background: #e9ece9;
             }
         }
+
         &_login-google {
             @include center(47%, 35px);
             border-radius: 20px;
@@ -46,10 +51,12 @@
             color: #fff;
             border: none;
             margin: 5px auto;
+
             @include respondMax("tablet") {
                 @include center(47%, 50px);
                 border-radius: 25px;
             }
+
             @include respondMax("mobile") {
                 @include center(75%, 35px);
             }
@@ -58,34 +65,55 @@
                 background-color: #7cadf7;
             }
         }
+        &_forgotten {
+            font-size: 15px;
+            margin: 5px 0;
+        }
+        &_account {
+            font-size: 15px;
+            color: #ced4ce;
+
+            .signup {
+                color: #111;
+                font-weight: 700;
+            }
+        }
     }
+
     &_image {
         width: 60%;
         height: 100vh;
         position: relative;
+
         @include respondMax("tablet") {
             width: 100%;
             height: 70vh;
         }
+
         img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
+
         .quote {
             position: absolute;
             top: 20%;
-            left: 10%;
+            left: 6%;
             color: $col-white;
             z-index: 3;
             font-size: 40px;
+
             @include respondMax("tablet") {
                 left: 5%;
                 right: 5%;
             }
+
             @include respondMax("mobile") {
                 font-size: 27px;
             }
         }
+
         .overlay {
             position: absolute;
             width: 100%;
@@ -97,5 +125,16 @@
             background-color: rgba(35, 121, 249, 0.5);
             z-index: 2;
         }
+    }
+}
+
+.register {
+    @include respondMax("tablet") {
+        flex-direction: column-reverse;
+    }
+}
+.login {
+    @include respondMax("tablet") {
+        flex-direction: column;
     }
 }
