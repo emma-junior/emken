@@ -1,13 +1,13 @@
-import React, {useState, FormEvent} from 'react'
-import {app, database} from '../../firebaseConfig'
+import React, {useState} from 'react'
+import {app} from '../../firebaseConfig'
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth"
-import "./register.scss"
+import "../../styles/auth.scss"
 import Input from '../../components/input/Input'
 import Logo from '../../components/logo/Logo'
 
 const Register = () => {
     const auth = getAuth(app)
-    const [data, setData] = useState<any>({
+    const [data, setData] = useState({
         email: '',
         password: ''
     })
@@ -27,17 +27,17 @@ const Register = () => {
         })
     }   
   return (
-    <section className='register'>
-        <div className='register_form'>
+    <section className='auth register'>
+        <div className='auth_form'>
             <div><Logo /></div>
-            <div className='register_form_input'><Input name="email" handleInput={handleInput}  /></div>
-            <div className='register_form_input'><Input name='password' handleInput={handleInput}/></div>
+            <div className='auth_form_input'><Input name="email" handleInput={handleInput}  /></div>
+            <div className='auth_form_input'><Input name='password' handleInput={handleInput}/></div>
             <br />
-            <button className='register_form_loginbtn' onClick={handleSubmit}>SIGN UP</button>
-            <button className='register_form_login-google'>SIGN UP WITH GOOGLE</button>
+            <button className='auth_form_loginbtn' onClick={handleSubmit}>SIGN UP</button>
+            <button className='auth_form_login-google'>SIGN UP WITH GOOGLE</button>
         </div>
-        <figure className='register_image'>
-            <img src='/assets/images/reg-image.jpg' alt='register' />
+        <figure className='auth_image'>
+            <img src='/assets/images/reg-image.jpg' alt='auth' />
             <h1 className='quote'>When medical emergencies strike, bravery and compassion become our guiding lights.</h1>
             <div className='overlay'></div>
         </figure>      
