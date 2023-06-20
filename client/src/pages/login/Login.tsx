@@ -1,7 +1,4 @@
 import React,{useState, FormEvent, useContext} from 'react'
-import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai"
-import {FcGoogle} from "react-icons/fc"
-import {FaFacebookSquare} from "react-icons/fa"
 import {app, database} from '../../firebaseConfig'
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
 import { useNavigate } from 'react-router'
