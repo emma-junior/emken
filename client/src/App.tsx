@@ -5,6 +5,8 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Chat from './pages/chat/Chat';
 import { AuthContext } from './context/AuthContext';
+import Emergency from './pages/emergency/Emergency';
+import Details from './pages/emergency-details/Details';
 
 function App() {
    const {currentUser} = useContext(AuthContext)
@@ -18,6 +20,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/medical-emergency' element={<Emergency />} />
+          <Route path='/medical-emergency/:slug' element={<Details />} />
           <Route path='/chat' element={<RequireAuth><Chat /></RequireAuth>} />
         </Routes>
       </Router>    
