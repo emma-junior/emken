@@ -9,6 +9,7 @@ import "../../styles/auth.scss"
 
 const Login = () => {
     const auth = getAuth(app)
+    const [loading, setLoading] = useState(false)
     const [data, setData] = useState({
         email: '',
         password: ''
@@ -22,13 +23,16 @@ const Login = () => {
     }
     const handleSubmit = (e:FormEvent) => {
         e.preventDefault();
+        setLoading(true)
         signInWithEmailAndPassword(auth, data.email, data.password)
         .then((response) => {
-            const user = response.user
-            dispatch({type:"LOGIN", payload:user})
+            // const user = response.user
+            // dispatch({type:"LOGIN", payload:user})
+            setLoading(false)
             navigate("/")
         })
         .catch((err) => {
+            setLoading(false)
             alert(err.message)
         })
     }   
@@ -42,11 +46,11 @@ const Login = () => {
         </figure>
         <div className='auth_form'>
             <div><Logo /></div>
-            <div className='auth_form_input'><Input name="email" handleInput={handleInput}  /></div>
-            <div className='auth_form_input'><Input name='password' handleInput={handleInput}/></div>
+            <div className='auth_form_input'><Input name="email" type="email" handleInput={handleInput}  /></div>
+            <div className='auth_form_input'><Input name='password' type="password" handleInput={handleInput}/></div>
             <br />
-            <button className='auth_form_loginbtn' onClick={handleSubmit}>SIGN UP</button>
-            <button className='auth_form_login-google'>SIGN UP WITH GOOGLE</button>
+            <button className='auth_form_loginbtn' onClick={handleSubmit}>{loading ? "LOADING...":"SIGN IN"}</button>
+            <button className='auth_form_login-google'>SIGN IN WITH GOOGLE</button>
             <br />
             <p className='auth_form_forgotten'>Forgotten your password?</p>
             <p className='auth_form_account'>Don't have an account? <span className='signup'>Sign up here!</span></p>

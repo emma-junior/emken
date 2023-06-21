@@ -5,8 +5,12 @@ import {FaBars, FaTimes} from "react-icons/fa"
 import { Link } from 'react-router-dom';
 import Logo from '../logo/Logo';
 import { AuthContext } from '../../context/AuthContext';
+import {getAuth} from "firebase/auth"
+import {app} from '../../firebaseConfig'
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
+    const auth = getAuth(app)
     const [color, setColor] = useState<boolean>(false);
     const [click, setClick] = useState<boolean>(false);
 
@@ -40,7 +44,7 @@ const Navbar = () => {
                     <li>FIND HOSPITAL</li>
                     <li><Link to="/chat">CHAT WITH DOCTOR</Link></li>
                 </ul>
-                {currentUser ? <div><div onClick={logOut} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div></div>
+                {currentUser ? <div><div onClick={() => signOut(auth)} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div></div>
                 :<div className='signup-login'>
                     <p className='signup'>Sign Up</p>
                     <div className='login-btn-wrapper'><Link to="/login"><Button size = 'medium' label="Log In" /></Link></div>
