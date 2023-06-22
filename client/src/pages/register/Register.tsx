@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState, FormEvent} from 'react'
 import {app} from '../../firebaseConfig'
-import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth"
+import {getAuth, createUserWithEmailAndPassword, updateProfile} from "firebase/auth"
 import { getFirestore, doc, serverTimestamp, setDoc, } from "firebase/firestore";
 import "../../styles/auth.scss"
 import Input from '../../components/input/Input'
@@ -13,7 +13,7 @@ const Register = () => {
     const db = getFirestore(app);
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState({
-        displayName: '',
+        username: '',
         email: '',
         password: ''
     })
@@ -23,7 +23,7 @@ const Register = () => {
 
         setData({...data, ...newInput})
     }
-    const handleSubmit = async(e:any) => {
+    const handleSubmit = async(e:FormEvent) => {
         e.preventDefault();
         setLoading(true)
         try {
@@ -32,6 +32,9 @@ const Register = () => {
                 data.email,
                 data.password
             );
+            await updateProfile(res.user, {
+              displayName:data.username
+            });
             await setDoc(doc(db, "users", res.user.uid), {
                 ...data,
                 uid: res.user.uid,
@@ -41,10 +44,6 @@ const Register = () => {
             setLoading(false)
             navigate("/login")
         }
-        // createUserWithEmailAndPassword(auth, data.email, data.password)
-        // .then((response) => {
-        //     console.log(response.user)
-        // })
         catch (err:any) {
             setLoading(false)
             alert(err.message)
@@ -54,7 +53,7 @@ const Register = () => {
     <section className='auth register'>
         <div className='auth_form'>
             <div><Logo /></div>
-            <div className='auth_form_input'><Input name="displayName" type='text' handleInput={handleInput}  /></div>
+            <div className='auth_form_input'><Input name="username" type='text' handleInput={handleInput}  /></div>
             <div className='auth_form_input'><Input name="email" type="email" handleInput={handleInput}  /></div>
             <div className='auth_form_input'><Input name='password' type='password' handleInput={handleInput}/></div>
             <br />
