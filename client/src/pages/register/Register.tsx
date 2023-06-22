@@ -57,7 +57,7 @@ const Register = () => {
             <div className='auth_form_input'><Input name="email" type="email" handleInput={handleInput}  /></div>
             <div className='auth_form_input'><Input name='password' type='password' handleInput={handleInput}/></div>
             <br />
-            <button className='auth_form_loginbtn' onClick={handleSubmit}>{loading ? "LOADING...":"SIGN UP"}</button>
+            <button className='auth_form_loginbtn' onClick={handleSubmit}>{loading ? <div className='spinner'></div>:"SIGN UP"}</button>
             <button className='auth_form_login-google'>SIGN UP WITH GOOGLE</button>
         </div>
         <figure className='auth_image'>

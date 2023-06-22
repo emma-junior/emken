@@ -1,8 +1,7 @@
-import React,{useState, FormEvent, useContext} from 'react'
-import {app, database} from '../../firebaseConfig'
+import React,{useState, FormEvent} from 'react'
+import {app} from '../../firebaseConfig'
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
 import { useNavigate } from 'react-router'
-import { AuthContext } from '../../context/AuthContext'
 import Logo from '../../components/logo/Logo'
 import Input from '../../components/input/Input'
 import "../../styles/auth.scss"
@@ -14,7 +13,6 @@ const Login = () => {
         email: '',
         password: ''
     })
-    const {dispatch} = useContext(AuthContext)
     const navigate = useNavigate()
     const handleInput = (event:React.ChangeEvent<HTMLInputElement>) => {
         let newInput = { [event.target.name]: event.target.value};
@@ -26,8 +24,6 @@ const Login = () => {
         setLoading(true)
         signInWithEmailAndPassword(auth, data.email, data.password)
         .then((response) => {
-            // const user = response.user
-            // dispatch({type:"LOGIN", payload:user})
             setLoading(false)
             navigate("/")
         })
@@ -49,7 +45,7 @@ const Login = () => {
             <div className='auth_form_input'><Input name="email" type="email" handleInput={handleInput}  /></div>
             <div className='auth_form_input'><Input name='password' type="password" handleInput={handleInput}/></div>
             <br />
-            <button className='auth_form_loginbtn' onClick={handleSubmit}>{loading ? "LOADING...":"SIGN IN"}</button>
+            <button className='auth_form_loginbtn' onClick={handleSubmit}>{loading ? <div className='spinner'></div>:"SIGN IN"}</button>
             <button className='auth_form_login-google'>SIGN IN WITH GOOGLE</button>
             <br />
             <p className='auth_form_forgotten'>Forgotten your password?</p>
