@@ -22,10 +22,7 @@ const Navbar = () => {
         }
     };
 
-    const {currentUser, dispatch} = useContext(AuthContext)
-    const logOut = () => {
-        dispatch({type:"LOGIN"})
-    }
+    const {currentUser} = useContext(AuthContext)
 
 
     const handleClick = () => setClick(!click)
@@ -44,7 +41,10 @@ const Navbar = () => {
                     <li>FIND HOSPITAL</li>
                     <li><Link to="/chat">CHAT WITH DOCTOR</Link></li>
                 </ul>
-                {currentUser ? <div><div onClick={() => signOut(auth)} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div></div>
+                {currentUser ? <div className='signup-login'>
+                    <p className='signup user'>{currentUser.displayName}</p>
+                    <div onClick={() => signOut(auth)} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div>
+                    </div>
                 :<div className='signup-login'>
                     <p className='signup'>Sign Up</p>
                     <div className='login-btn-wrapper'><Link to="/login"><Button size = 'medium' label="Log In" /></Link></div>

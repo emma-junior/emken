@@ -40,7 +40,7 @@ const Register = () => {
                 uid: res.user.uid,
                 timeStamp: serverTimestamp(),
             });
-            // await setDoc(doc(db, "userChats", res.user.uid), {});
+            await setDoc(doc(db, "userChats", res.user.uid), {});
             setLoading(false)
             navigate("/login")
         }
