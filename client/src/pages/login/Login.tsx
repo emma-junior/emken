@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router'
 import Logo from '../../components/logo/Logo'
 import Input from '../../components/input/Input'
 import "../../styles/auth.scss"
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const auth = getAuth(app)
@@ -49,7 +50,7 @@ const Login = () => {
             <button className='auth_form_login-google'>SIGN IN WITH GOOGLE</button>
             <br />
             <p className='auth_form_forgotten'>Forgotten your password?</p>
-            <p className='auth_form_account'>Don't have an account? <span className='signup'>Sign up here!</span></p>
+            <p className='auth_form_account'>Don't have an account? <span className='signup'><Link to="/register">Sign up here!</Link></span></p>
         </div>
     </section>
   )
