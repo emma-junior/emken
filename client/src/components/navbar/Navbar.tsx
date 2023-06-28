@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className={click ? 'show-sidebar' : 'nav-links'}>
                 <ul>
                     <li>HOME</li>
-                    <li>MEDICAL EMERGENCY</li>
+                    <li><Link to="/medical-emergency">MEDICAL EMERGENCY</Link></li>
                     <li>FIND HOSPITAL</li>
                     <li><Link to="/chat">CHAT WITH DOCTOR</Link></li>
                 </ul>
@@ -46,7 +46,7 @@ const Navbar = () => {
                     <div onClick={() => signOut(auth)} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div>
                     </div>
                 :<div className='signup-login'>
-                    <p className='signup'>Sign Up</p>
+                    <p className='signup'><Link to="/register">Sign Up</Link></p>
                     <div className='login-btn-wrapper'><Link to="/login"><Button size = 'medium' label="Log In" /></Link></div>
                 </div>
                 }
