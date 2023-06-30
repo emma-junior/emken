@@ -3,8 +3,10 @@ import { doc, getFirestore, onSnapshot } from "firebase/firestore";
 import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
 import {app} from '../../firebaseConfig'
+import ProfilePic from "../profile-pic/ProfilePic";
 
-const Chatting = () => {
+const Chats = () => {
+
     const db = getFirestore(app);
     const [chats, setChats] = useState<any>([]);
 
@@ -28,25 +30,27 @@ const Chatting = () => {
   const handleSelect = (u:any) => {
     dispatch({ type: "CHANGE_USER", payload: u });
   };
-  console.log('chats', chats)
+
   return (
-    <div>
-        Chatting
-         { Object.entries(chats)?.sort((a:any,b:any)=>b[1].date - a[1].date).map((chat:any) => (
-        <div
-          className="userChat"
-          key={chat[0]}
-          onClick={() => handleSelect(chat[1].userInfo)}
-        >
-          {/* <img src={chat[1].userInfo.photoURL} alt="" /> */}
-          <div className="userChatInfo">
-            <span>{chat[1].userInfo?.username}</span>
-            <p>{chat[1].lastMessage?.text}</p>
-          </div>
-        </div>
-      ))}      
+    <div className="chats">
+        { Object.entries(chats)?.sort((a:any,b:any)=>b[1].date - a[1].date).map((chat:any) => {
+            const letter = chat[1].userInfo?.username.charAt(0).toUpperCase()
+            return (
+                <div
+                className="userChat"
+                key={chat[0]}
+                onClick={() => handleSelect(chat[1].userInfo)}
+                >
+                <ProfilePic letter={letter}  />
+                <div className="userChatInfo">
+                    <span>{chat[1].userInfo?.username}</span>
+                    <p>{chat[1].lastMessage?.text}</p>
+                </div>
+                </div>
+            )
+      })}      
     </div>
   )
 }
 
-export default Chatting
+export default Chats

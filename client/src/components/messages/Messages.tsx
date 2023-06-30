@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { doc, getFirestore, onSnapshot } from "firebase/firestore";
 import { ChatContext } from "../../context/ChatContext";
 import {app} from '../../firebaseConfig'
-import Message from "./Message";
+import "./messages.scss"
+import Message from "../message/Message";
 
 const Messages = () => {
+
     const db = getFirestore(app);
 
     const [messages, setMessages] = useState([]);
@@ -19,11 +21,11 @@ const Messages = () => {
       unSub();
     };
   }, [data.chatId]);
-  console.log("messages", messages)
+
   return (
     <div className="messages">
       {messages.map((m, index) => (
-        <Message message={m}  />
+        <Message message={m} key={index}  />
       ))}
     </div>
   )

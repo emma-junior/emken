@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.chat {
+    flex: 2;
+
+    .chatInfo {
+        height: 50px;
+        background-color: #5d5b8d;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        color: lightgray;
+    }
+
+    .no-chat {
+        @include center(100%, 100%);
+    }
+}

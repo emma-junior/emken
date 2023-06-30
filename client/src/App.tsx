@@ -3,10 +3,10 @@ import Home from './pages/home/Home';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
-import Chat from './pages/chat/Chat';
 import { AuthContext } from './context/AuthContext';
 import Emergency from './pages/emergency/Emergency';
 import Details from './pages/emergency-details/Details';
+import ChatPg from './pages/chat/ChatPg';
 
 function App() {
    const {currentUser} = useContext(AuthContext)
@@ -22,7 +22,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/medical-emergency' element={<Emergency />} />
           <Route path='/medical-emergency/:slug' element={<Details />} />
-          <Route path='/chat' element={<RequireAuth><Chat /></RequireAuth>} />
+          <Route path='/chat' element={<RequireAuth><ChatPg /></RequireAuth>} />
         </Routes>
       </Router>    
   );
