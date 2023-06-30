@@ -14,11 +14,12 @@ import {
 import {app} from '../../firebaseConfig'
 import { AuthContext } from '../../context/AuthContext';
 import { ChatContext } from "../../context/ChatContext";
-import Chatting from './Chatting';
-import ChatSection from './ChatSection';
+import "./search.scss"
+import ProfilePic from '../profile-pic/ProfilePic';
 
-const Chat = () => {
-  const db = getFirestore(app);
+const Search = () => {
+
+    const db = getFirestore(app);
   const [username, setUsername] = useState("");
   const [user, setUser] = useState<any>(null);
   const [err, setErr] = useState(false);
@@ -45,7 +46,6 @@ const Chat = () => {
   const handleKey = (e:any) => {
     e.code === "Enter" && handleSearch();
   };
-console.log("user", user)
 
   const handleSelect = async () => {
     //check whether the group(chats in firestore) exists, if not create
@@ -83,31 +83,29 @@ console.log("user", user)
     setUser(null);
     setUsername("")
   };
-
+  const letter = user?.username.charAt(0).toUpperCase()
   return (
-    <div>
-       <div className="searchForm">
-        <input
-          type="text"
-          placeholder="Find a user"
-          onKeyDown={handleKey}
-          onChange={(e) => setUsername(e.target.value)}
-          value={username}
-        />
-      </div>
-      {err && <span>User not found!</span>}
-      {user && (
-        <div className="userChat" onClick={handleSelect}>
-          <div className="userChatInfo">
-            <span>{user.username}</span>
-          </div>
+    <div className='search'>
+        <div className="searchForm">
+            <input
+                type="text"
+                placeholder="Find a user"
+                onKeyDown={handleKey}
+                onChange={(e) => setUsername(e.target.value)}
+                value={username}
+            />
         </div>
-      )}
-      <Chatting />
-      <hr />
-      <ChatSection />
+        {err && <span>User not found!</span>}
+        {user && (
+            <div className="userChat" onClick={handleSelect}>
+                <ProfilePic letter={letter} />
+                <div className="userChatInfo">
+                    <span>{user.username}</span>
+                </div>
+            </div>
+        )}
     </div>
   )
 }
 
-export default Chat
+export default Search
