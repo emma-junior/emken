@@ -23,11 +23,19 @@
             color: $col-primary;
         }
         .logo {
-            font-size: 11px
+            font-size: 11px;
         }
     }
 
     .no-chat {
-        @include center(100%, 100%);
+        @include center(100%, 90%);
+
+        img {
+            width: 200px;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 25px;
+        }
     }
 }

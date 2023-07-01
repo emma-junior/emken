@@ -39,7 +39,7 @@ const Chats = () => {
                 <div
                 className="userChat"
                 key={chat[0]}
-                onClick={() => handleSelect(chat[1].userInfo)}
+                onClick={() => handleSelect(chat[1]?.userInfo)}
                 >
                 <ProfilePic letter={letter}  />
                 <div className="userChatInfo">

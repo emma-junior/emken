@@ -39,7 +39,7 @@ const Navbar = () => {
                     <li>HOME</li>
                     <li><Link to="/medical-emergency">MEDICAL EMERGENCY</Link></li>
                     <li>FIND HOSPITAL</li>
-                    <li><Link to="/chat">CHAT WITH DOCTOR</Link></li>
+                    <li><Link to="/chat-with-doctor">CHAT WITH DOCTOR</Link></li>
                 </ul>
                 {currentUser ? <div className='signup-login'>
                     <p className='signup user'>{currentUser.displayName}</p>

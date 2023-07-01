@@ -7,7 +7,6 @@ import { AuthContext } from './context/AuthContext';
 import Emergency from './pages/emergency/Emergency';
 import Details from './pages/emergency-details/Details';
 import ChatPg from './pages/chat/ChatPg';
-import Navbar from './components/navbar/Navbar';
 
 function App() {
    const {currentUser} = useContext(AuthContext)
@@ -17,14 +16,13 @@ function App() {
   };
   return (
       <Router>
-        {/* <Navbar /> */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/medical-emergency' element={<Emergency />} />
           <Route path='/medical-emergency/:slug' element={<Details />} />
-          <Route path='/chat' element={<RequireAuth><ChatPg /></RequireAuth>} />
+          <Route path='/chat-with-doctor' element={<RequireAuth><ChatPg /></RequireAuth>} />
         </Routes>
       </Router>    
   );
