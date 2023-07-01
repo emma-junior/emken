@@ -3,6 +3,36 @@
 
 .chat-sidebar {
     flex: 1;
-    background-color: #3e3c61;
+    background-color: $col-secondary;
     position: relative;
+    padding: 25px 0;
+    color: #fff;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+
+    .chat-navbar {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding: 10px 10px 50px;
+        justify-content: space-between;
+        color: #ddddf7;
+
+        .logo{
+            color: #fff;
+            font-size: 10px;
+            font-family: 'Pacifico', cursive;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+        .user {
+            &_username {
+                background-color: #fbfbfb;
+                color: #9999aa;
+                font-size: 13px;
+                padding: 5px;
+                border-radius: 3px;
+            }
+        }
+
+    }
 }

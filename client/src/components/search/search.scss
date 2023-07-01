@@ -2,19 +2,22 @@
 @import "../../styles/mixins";
 
 .search {
-    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
 
     .searchForm {
-        padding: 10px;
-
+        @include center(100%, 50px);
         input {
+            border: 2px solid $col-white;
             background-color: transparent;
-            border: none;
-            color: white;
+            border-radius: 20px;
+            color: $col-white;
             outline: none;
-        
+            height: 40px;
+            width: 80%;
+            padding: 0 10px;
+            
             &::placeholder {
-                color: lightgray;
+                color: $col-white;
             }
         }
     }

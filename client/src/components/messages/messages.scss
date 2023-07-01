@@ -2,8 +2,8 @@
 @import "../../styles/mixins";
 
 .messages {
-    background-color: #ddddf7;
+    background-color: #fbfbfb;
     padding: 10px;
-    height: calc(100% - 160px);
-    overflow: scroll;
+    height: 80%;
+    overflow: auto;
 }
