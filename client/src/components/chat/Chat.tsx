@@ -3,6 +3,8 @@ import { ChatContext } from '../../context/ChatContext'
 import "./chat.scss"
 import Messages from "../messages/Messages";
 import ChatInput from "../chatInput/ChatInput";
+import Logo from "../logo/Logo";
+import {SlOptions} from "react-icons/sl"
 
 const Chat = () => {
   const { data } = useContext(ChatContext);
@@ -11,7 +13,9 @@ const Chat = () => {
       {data.user.username ? 
         <>
           <div className="chatInfo">
-            <span>{data.user?.username}</span>
+            <span className="chatInfo_username">{data.user?.username}</span>
+            <div className="logo"><Logo /></div>
+            <h2><SlOptions /></h2>
           </div> 
           <Messages />
           <ChatInput />

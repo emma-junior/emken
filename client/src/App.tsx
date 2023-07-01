@@ -7,6 +7,7 @@ import { AuthContext } from './context/AuthContext';
 import Emergency from './pages/emergency/Emergency';
 import Details from './pages/emergency-details/Details';
 import ChatPg from './pages/chat/ChatPg';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
    const {currentUser} = useContext(AuthContext)
@@ -16,6 +17,7 @@ function App() {
   };
   return (
       <Router>
+        {/* <Navbar /> */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />

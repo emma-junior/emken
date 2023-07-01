@@ -2,22 +2,16 @@
 @import "../../styles/mixins";
 
 .chatpg {
-    background-color: #a7bcff;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .container {
-        border: 1px solid white;
-        border-radius: 10px;
-        width: 65%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
         display: flex;
         overflow: hidden;
         
-        @include respondMax("tablet") {
-            width: 90%;
-        }
     }
 }
