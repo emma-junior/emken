@@ -12,7 +12,7 @@ const ChatSidebar = () => {
         <div className='chat-navbar'>
           <span className='logo'><Link to="/"><h1>EMKEN</h1></Link></span>
           <div className="user">
-            <span className='user_username'>{currentUser.displayName}</span>
+            <span className='user_username'>{currentUser?.displayName}</span>
           </div>
         </div>
       <Search />

@@ -20,7 +20,10 @@ const Chat = () => {
           <Messages />
           <ChatInput />
         </>
-      : <div className="no-chat">Choose a chat to start the conversation</div> }
+      : <div className="no-chat">
+          <img src="/assets/icons/start-chat.svg" alt="start-chat" />
+          <p>Choose a chat to start the conversation</p>
+        </div> }
       
     </div>
   )
