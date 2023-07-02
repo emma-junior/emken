@@ -47,17 +47,31 @@ body {
          background-color: #1766db;
      }
 
-     .userChatInfo {
-         span {
+    .userChatInfo {
+        span {
              font-size: 18px;
              font-weight: 500;
-         }
+        }
 
-         p {
+        p {
              font-size: 14px;
              color: #fff;
-         }
-     }
+        }
+    }
  }
 
+.chat-mobile {
+    display: none;
 
+    @include respondMax("tablet") {
+        display: flex;
+    }
+}
+
+.chat-desktop {
+    display: flex;
+
+    @include respondMax("tablet") {
+        display: none;
+    }
+}

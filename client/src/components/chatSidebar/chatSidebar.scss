@@ -8,6 +8,8 @@
     padding: 25px 0;
     color: #fff;
     box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    height: 100vh;
+    overflow: auto;
 
     .chat-navbar {
         display: flex;
@@ -27,7 +29,7 @@
         .user {
             &_username {
                 background-color: #fbfbfb;
-                color: #9999aa;
+                color: $col-primary;
                 font-size: 13px;
                 padding: 5px;
                 border-radius: 3px;

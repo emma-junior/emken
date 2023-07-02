@@ -5,6 +5,7 @@ import Messages from "../messages/Messages";
 import ChatInput from "../chatInput/ChatInput";
 import Logo from "../logo/Logo";
 import {SlOptions} from "react-icons/sl"
+import { Link } from "react-router-dom";
 
 const Chat = () => {
   const { data } = useContext(ChatContext);
@@ -14,7 +15,7 @@ const Chat = () => {
         <>
           <div className="chatInfo">
             <span className="chatInfo_username">{data.user?.username}</span>
-            <div className="logo"><Logo /></div>
+            <div className="logo"><Link to="/"><Logo /></Link></div>
             <h2><SlOptions /></h2>
           </div> 
           <Messages />
