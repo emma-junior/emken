@@ -16,6 +16,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { ChatContext } from "../../context/ChatContext";
 import "./search.scss"
 import ProfilePic from '../profile-pic/ProfilePic';
+import { Link } from 'react-router-dom';
 
 const Search = () => {
 
@@ -97,12 +98,22 @@ const Search = () => {
         </div>
         {err && <span>User not found!</span>}
         {user && (
-            <div className="userChat" onClick={handleSelect}>
+          <>
+            <div className="userChat chat-desktop" onClick={handleSelect}>
                 <ProfilePic letter={letter} />
                 <div className="userChatInfo">
                     <span>{user.username}</span>
                 </div>
             </div>
+            <Link to="/chat">
+              <div className="userChat chat-mobile" onClick={handleSelect}>
+                  <ProfilePic letter={letter} />
+                  <div className="userChatInfo">
+                      <span>{user.username}</span>
+                  </div>
+              </div>
+            </Link>
+          </>
         )}
     </div>
   )
