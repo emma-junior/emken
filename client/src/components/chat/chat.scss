@@ -28,14 +28,21 @@
     }
 
     .no-chat {
-        @include center(100%, 90%);
+        @include center(100%, 90vh);
 
         img {
             width: 200px;
-            margin: 10px 0;
+            @include respondMax("mobile") {
+                width: 150px;
+            }
         }
         p {
             font-size: 25px;
+            margin: 10px auto;
+            text-align: center;
+            @include respondMax("mobile") {
+                font-size: 20px;
+            }
         }
     }
 }

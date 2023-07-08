@@ -35,11 +35,11 @@
             border: none;
             padding: 10px 15px;
             color: white;
-            background-color: #8da4f1;
+            background: $col-secondary;
             cursor: pointer;
 
             &:hover {
-                background: $col-secondary;
+                background-color: #8da4f1;
             }
         }
     }

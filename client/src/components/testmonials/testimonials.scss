@@ -66,5 +66,8 @@
                 }
             }
         }
+        @include respondMax("tablet") {
+            display: none;
+        }
     }
 }
