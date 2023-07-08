@@ -6,4 +6,7 @@
     padding: 10px;
     height: 80vh;
     overflow: auto;
+    @include respondMax("mobile") {
+        background: #e7e2e2;
+    }
 }
