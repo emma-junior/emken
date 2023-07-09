@@ -84,13 +84,13 @@
             }
             @keyframes floatTwo {
                 0% {
-                    transform: translateX(20px);
+                    transform: translate(20px, 20px);
                 }            
                 50% {
-                    transform: translateX(-20px);
+                    transform: translate(-20px, -20px);
                 }           
                 100% {
-                    transform: translateX(20px);
+                    transform: translate(20px, 20px);
                 }
             }
         }

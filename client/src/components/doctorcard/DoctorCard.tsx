@@ -13,8 +13,8 @@ const DoctorCard = ({doctor}:Props) => {
     <section className='card'>
         <LazyLoadImage
           className="doctor-pic"
-          src={`/assets/images/doctors/${doctor.image}.jpg`}
-          placeholderSrc="/assets/images/doctors/doc-placeholder.jpg"
+          src={`/assets/images/doctors/${doctor.image}.webp`}
+          placeholderSrc={`/assets/images/doctors/${doctor.imagePlaceholder}.webp`}
           effect="blur"
           alt="doctor image"
         />
