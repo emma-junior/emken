@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className={color ? 'navbar navbar-bg' : 'navbar'}>
         <div className='navbar-wrapper'>
-            <Logo />
+            <Link to="/"><Logo /></Link>
             <div className={click ? 'show-sidebar' : 'nav-links'}>
                 <ul>
                     <li>HOME</li>

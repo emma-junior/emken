@@ -37,4 +37,31 @@
         }
 
     }
+    .doctorsdropdown-wrapper {
+        width: 85%;
+        margin: 15px auto;
+
+        .dropdown-btn {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            .icon {
+                font-weight: bold;
+            }
+        }
+        .doctors-names {
+            display: grid;
+            grid-template-columns: auto auto;
+
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+
+                .li-arrow {
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
 }

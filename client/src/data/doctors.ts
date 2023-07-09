@@ -10,7 +10,7 @@ export interface doctorsType {
 export const doctors:doctorsType[] = [
         {
             id: 1,
-            image: "doctor-one",
+            image: "dr-johnson",
             name: "Dr. Johnson Peter",
             facebookAddress: "https://emken.vercel.app/",
             twitterAddress: "https://emken.vercel.app/",
@@ -18,7 +18,7 @@ export const doctors:doctorsType[] = [
         },
         {
             id: 2,
-            image: "doctor-two",
+            image: "dr-esther",
             name: "Dr. Obi Esther",
             facebookAddress: "https://emken.vercel.app/",
             twitterAddress: "https://emken.vercel.app/",
@@ -26,7 +26,7 @@ export const doctors:doctorsType[] = [
         },
         {
             id: 3,
-            image: "doctor-three",
+            image: "dr-ezeh",
             name: "Dr. Ezeh Charles",
             facebookAddress: "https://emken.vercel.app/",
             twitterAddress: "https://emken.vercel.app/",

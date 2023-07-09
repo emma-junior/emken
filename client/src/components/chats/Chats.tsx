@@ -49,6 +49,8 @@ const Chats = () => {
                       <p>{chat[1].lastMessage?.text}</p>
                   </div>
                 </div>
+
+                {/* for tablet and mobile screens. difference is the router link */}
                 <Link to="/chat">
                   <div
                   className="userChat chat-mobile"

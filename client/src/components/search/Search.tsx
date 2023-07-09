@@ -105,6 +105,8 @@ const Search = () => {
                     <span>{user.username}</span>
                 </div>
             </div>
+
+            {/* for tablet and mobile screens. difference is the router link */}
             <Link to="/chat">
               <div className="userChat chat-mobile" onClick={handleSelect}>
                   <ProfilePic letter={letter} />
