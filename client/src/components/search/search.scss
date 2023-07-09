@@ -5,7 +5,7 @@
     margin-bottom: 10px;
 
     .searchForm {
-        @include center(100%, 50px);
+        @include center(100%, 60px);
         input {
             border: 2px solid $col-white;
             background-color: transparent;
