@@ -29,16 +29,21 @@ const Navbar = () => {
 
     useEffect(() => {
 		window.addEventListener("scroll", changeColor);
-  }, [])
+    }, [])
+    const nearbyHospital = () => {
+        const encodedSearchWord = encodeURIComponent("emergencies health");
+        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedSearchWord}`;
+        window.open(mapsUrl);
+    };
   return (
     <nav className={color ? 'navbar navbar-bg' : 'navbar'}>
         <div className='navbar-wrapper'>
             <Link to="/"><Logo /></Link>
             <div className={click ? 'show-sidebar' : 'nav-links'}>
                 <ul>
-                    <li>HOME</li>
+                    <li><Link to="/">HOME</Link></li>
                     <li><Link to="/medical-emergency">MEDICAL EMERGENCY</Link></li>
-                    <li>FIND HOSPITAL</li>
+                    <li onClick={nearbyHospital}>FIND HOSPITAL</li>
                     <li className='chat-desktop'><Link to="/chat-with-doctor">CHAT WITH DOCTOR</Link></li>
                     <li className='chat-mobile'><Link to="/chats">CHAT WITH DOCTOR</Link></li>
                 </ul>
