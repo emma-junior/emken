@@ -6,7 +6,7 @@ export const emergency = [
     category: "acute-emergency",
     overview: "During an asthma attack, also called an asthma exacerbation, the airways become swollen and inflamed. The muscles around the airways contract and the airways produce extra mucus, causing the breathing (bronchial) tubes to narrow.",
     symptoms: ["Severe shortness of breath, chest tightness or pain, and coughing or wheezing", "Low peak expiratory flow (PEF) readings, if you use a peak flow meter", "Symptoms that fail to respond to use of a quick-acting (rescue) inhaler"],
-    treatment: ["your first step to take is this", "your second step to take is this", "your third step to take is this"],
+    treatment: ["Move away from all triggers like dust, smoke, perfumes etc", "Take 2 to 3 puffs of your salbutamol inhaler", "If the difficulty in breathing does not improve, get to the nearest hospital immediately."],
     slug: "asthmatic-attack"
   },
   {

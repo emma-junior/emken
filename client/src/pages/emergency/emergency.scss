@@ -3,5 +3,53 @@
 
 
 .emergency {
-    margin: 60px auto;
+    margin: 75px auto;
+
+    &_header {
+        display: flex;
+        width: 80%;
+        margin-inline: auto;
+        justify-content: space-between;
+
+        &_topic {
+            width: 50%;
+            font-size: 45px;
+            margin: auto 0;
+            font-family: 'Roboto Slab', serif;
+
+            span {
+                color: $col-primary;
+            }
+        }
+        &_pic {
+            width: 40%;
+            height: 500px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &_main {
+        width: 85%;
+        margin: 30px auto 0;
+        color: $col-primary;
+        &_topic {
+            color: $col-secondary;
+            text-align: center;
+            font-weight: bold;
+        }
+        &_category {
+            margin: 20px 0 7px;
+        }
+        &_emergencies {
+            &_name {
+                font-size: 18px;
+                padding: 4px 0;
+                list-style: none;
+            }
+        }
+    }
 }

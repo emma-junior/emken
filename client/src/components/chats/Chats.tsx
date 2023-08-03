@@ -39,7 +39,7 @@ const Chats = () => {
             return (
               <>
                 <div
-                className="userChat chat-desktop"
+                className="userChat "
                 key={chat[0]}
                 onClick={() => handleSelect(chat[1]?.userInfo)}
                 >
@@ -49,21 +49,6 @@ const Chats = () => {
                       <p>{chat[1].lastMessage?.text}</p>
                   </div>
                 </div>
-
-                {/* for tablet and mobile screens. difference is the router link */}
-                <Link to="/chat">
-                  <div
-                  className="userChat chat-mobile"
-                  key={chat[0]}
-                  onClick={() => handleSelect(chat[1]?.userInfo)}
-                  >
-                    <ProfilePic letter={letter}  />
-                    <div className="userChatInfo">
-                        <span>{chat[1].userInfo?.username}</span>
-                        <p>{chat[1].lastMessage?.text}</p>
-                    </div>
-                  </div>
-                </Link>
               </>
             )
       })}      

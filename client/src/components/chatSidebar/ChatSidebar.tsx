@@ -6,10 +6,13 @@ import { AuthContext } from '../../context/AuthContext';
 import { Link } from 'react-router-dom';
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
 import {HiArrowSmRight} from 'react-icons/hi';
+import useWindowSize from '../../context/useWindowSize';
 
 const ChatSidebar = () => {
   const { currentUser } = useContext(AuthContext);
   const [doctorsDropdown, setDoctorsDropdown] = useState(false)
+
+  const windowSize = useWindowSize()
   return (
     <div className='chat-sidebar'>
         <div className='chat-navbar'>
@@ -33,7 +36,10 @@ const ChatSidebar = () => {
           </ul>}
         </div>
       <Search />
-      <Chats />
+      {
+        windowSize.width >= 900 ? (<Chats />) : (<Link to="/chat"><Chats /></Link>)
+      } 
+      
     </div>
   )
 }

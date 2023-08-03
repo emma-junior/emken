@@ -5,12 +5,12 @@ import "./chatpg.scss"
 
 const ChatPg = () => {
   return (
-    <div className='chatpg'>
-        <div className='container'>
-            <ChatSidebar />
-            <Chat />
+    <section className='chatpg'>
+        <div className='chatpg_container'>
+            <div className='chatpg_container_sidebar'><ChatSidebar /></div>
+            <div className='chatpg_container_chat'><Chat /></div>
         </div>
-    </div>
+    </section>
   )
 }
 
