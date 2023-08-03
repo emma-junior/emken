@@ -15,8 +15,8 @@ import {app} from '../../firebaseConfig'
 import { AuthContext } from '../../context/AuthContext';
 import { ChatContext } from "../../context/ChatContext";
 import "./search.scss"
-import ProfilePic from '../profile-pic/ProfilePic';
 import { Link } from 'react-router-dom';
+import SearchResult from './SearchResult';
 
 const Search = () => {
 
@@ -99,22 +99,11 @@ const Search = () => {
         {err && <span>User not found!</span>}
         {user && (
           <>
-            <div className="userChat chat-desktop" onClick={handleSelect}>
-                <ProfilePic letter={letter} />
-                <div className="userChatInfo">
-                    <span>{user.username}</span>
-                </div>
-            </div>
+            <div className='chat-desktop'><SearchResult letter={letter} user={user} handleSelect={handleSelect}  /></div>
 
-            {/* for tablet and mobile screens. difference is the router link */}
-            <Link to="/chat">
-              <div className="userChat chat-mobile" onClick={handleSelect}>
-                  <ProfilePic letter={letter} />
-                  <div className="userChatInfo">
-                      <span>{user.username}</span>
-                  </div>
-              </div>
-            </Link>
+            {/* for tablet and mobile screens. difference is the router link that goes to the chat component */}
+            <Link to="/chat"><div className='chat-mobile'><SearchResult letter={letter} user={user} handleSelect={handleSelect}  /></div></Link>
+
           </>
         )}
     </div>

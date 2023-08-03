@@ -40,8 +40,8 @@ body {
      display: flex;
      align-items: center;
      gap: 10px;
-    //  color: #000;
      cursor: pointer;
+    
 
      &:hover {
          background-color: #1766db;
@@ -62,7 +62,7 @@ body {
 
 .chat-mobile {
     display: none;
-
+    width: 100%;
     @include respondMax("tablet") {
         display: flex;
     }
@@ -70,7 +70,7 @@ body {
 
 .chat-desktop {
     display: flex;
-
+    width: 100%;
     @include respondMax("tablet") {
         display: none;
     }
