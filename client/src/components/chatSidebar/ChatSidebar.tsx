@@ -2,11 +2,11 @@ import React, { useContext, useState} from 'react'
 import "./chatSidebar.scss"
 import Search from '../search/Search'
 import Chats from '../chats/Chats'
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../hooks/AuthContext';
 import { Link } from 'react-router-dom';
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
 import {HiArrowSmRight} from 'react-icons/hi';
-import useWindowSize from '../../context/useWindowSize';
+import useWindowSize from '../../hooks/useWindowSize';
 
 const ChatSidebar = () => {
   const { currentUser } = useContext(AuthContext);

@@ -14,7 +14,7 @@ export const emergency = [
     category: "Acute Emergency",
     overview: "A seizure is a sudden, uncontrolled burst of electrical activity in the brain. It can cause changes in behavior, movements, feelings and levels of consciousness. Having two or more seizures at least 24 hours apart that don't have a known cause is considered to be epilepsy. \n There are many types of seizures, and they have a range of symptoms and severity. Seizure types vary by where they begin in the brain and how far they spread. Most seizures last from 30 seconds to two minutes. A seizure that lasts longer than five minutes is a medical emergency.",
     symptoms: ["Temporary confusion.", "Jerking movements of the arms and legs that can't be controlled.", "Loss of consciousness or awareness.", "A staring spell.", "Cognitive or emotional changes. They may include fear, anxiety or a feeling that you've already lived this moment, known as deja vu."],
-    treatment: ["your first step to take is this", "your second step to take is this", "your third step to take is this"],
+    treatment: ["Be calm", "Remove any source of injury from the patient", "Place a soft clothing under the patient's head", "Remove any tight clothing", "Reassure the patient till he/she recovers", "When jerking stops, roll the patient to one side", "See your doctor as soon as possible"],
     slug: "seizures"
   },
   {
@@ -22,7 +22,7 @@ export const emergency = [
     category: "Acute Emergency",
     overview: "A heart attack occurs when the flow of blood to the heart is severely reduced or blocked. The blockage is usually due to a buildup of fat, cholesterol and other substances in the heart (coronary) arteries. The fatty, cholesterol-containing deposits are called plaques. The process of plaque buildup is called atherosclerosis. \n Sometimes, a plaque can rupture and form a clot that blocks blood flow. A lack of blood flow can damage or destroy part of the heart muscle.",
     symptoms: ["Chest pain that may feel like pressure, tightness, pain, squeezing or aching", "Pain or discomfort that spreads to the shoulder, arm, back, neck, jaw, teeth or sometimes the upper belly", "Cold sweat"],
-    treatment: ["your first step to take is this", "your second step to take is this", "your third step to take is this"],
+    treatment: ["If patient is unconscious, start cardiopulmonary resuscitation (CPR)", "If still unconscious, shout for help", "continue CPR till medical help arrives", "If patient is conscious, ask patient to sit calm", "Loosen any tight clothing", "If patient is conscious, patient should chew and swallow a tablet of asprin"],
     slug: "heart-attack"
   },
   {
@@ -30,7 +30,7 @@ export const emergency = [
     category: "Acute Emergency",
     overview: "An ischemic stroke occurs when the blood supply to part of the brain is interrupted or reduced, preventing brain tissue from getting oxygen and nutrients. Brain cells begin to die in minutes. \n A stroke is a medical emergency, and prompt treatment is crucial. Early action can reduce brain damage and other complications.",
     symptoms: ["Trouble speaking and understanding what others are saying.", "Paralysis or numbness of the face, arm or leg.", "Problems seeing in one or both eyes.", "Headache.", "Trouble walking."],
-    treatment: ["your first step to take is this", "your second step to take is this", "your third step to take is this"],
+    treatment: ["Take patient immediately to hospital, TIME IS OF ESSENCE."],
     slug: "stroke"
   }
 ]

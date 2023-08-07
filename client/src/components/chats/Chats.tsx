@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { doc, getFirestore, onSnapshot } from "firebase/firestore";
-import { AuthContext } from "../../context/AuthContext";
-import { ChatContext } from "../../context/ChatContext";
+import { AuthContext } from "../../hooks/AuthContext";
+import { ChatContext } from "../../hooks/ChatContext";
 import {app} from '../../firebaseConfig'
 import ProfilePic from "../profile-pic/ProfilePic";
-import { Link } from "react-router-dom";
 
 const Chats = () => {
 
@@ -46,7 +45,7 @@ const Chats = () => {
                   <ProfilePic letter={letter}  />
                   <div className="userChatInfo">
                       <span>{chat[1].userInfo?.username}</span>
-                      <p>{chat[1].lastMessage?.text}</p>
+                      <p>{chat[1].lastMessage?.text.substr(0, 12)}...</p>
                   </div>
                 </div>
               </>

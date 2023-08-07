@@ -4,10 +4,11 @@ import "./navbar.scss"
 import {FaBars, FaTimes} from "react-icons/fa"
 import { Link } from 'react-router-dom';
 import Logo from '../logo/Logo';
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../hooks/AuthContext';
 import {getAuth} from "firebase/auth"
 import {app} from '../../firebaseConfig'
 import { signOut } from 'firebase/auth';
+import { nearbyHospital } from '../../helper/helper';
 
 const Navbar = () => {
     const auth = getAuth(app)
@@ -31,11 +32,6 @@ const Navbar = () => {
 		window.addEventListener("scroll", changeColor);
     }, [])
     
-    const nearbyHospital = () => {
-        const encodedSearchWord = encodeURIComponent("emergencies health");
-        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedSearchWord}`;
-        window.open(mapsUrl);
-    };
   return (
     <nav className={color ? 'navbar navbar-bg' : 'navbar'}>
         <div className='navbar-wrapper'>
