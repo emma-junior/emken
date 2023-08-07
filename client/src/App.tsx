@@ -3,12 +3,13 @@ import Home from './pages/home/Home';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
-import { AuthContext } from './context/AuthContext';
+import { AuthContext } from './hooks/AuthContext';
 import Emergency from './pages/emergency/Emergency';
 import Details from './pages/emergency-details/Details';
 import ChatPg from './pages/chat/ChatPg';
 import ChatSidebar from './components/chatSidebar/ChatSidebar';
 import Chat from './components/chat/Chat';
+import ScrollToTop from './hooks/ScrollToTop';
 
 function App() {
    const {currentUser} = useContext(AuthContext)
@@ -18,6 +19,7 @@ function App() {
   };
   return (
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />

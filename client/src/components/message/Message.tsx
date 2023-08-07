@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
-import { AuthContext } from "../../context/AuthContext";
-import { ChatContext } from "../../context/ChatContext";
+import { AuthContext } from "../../hooks/AuthContext";
+import { ChatContext } from "../../hooks/ChatContext";
 import "./message.scss"
 import ProfilePic from "../profile-pic/ProfilePic";
 

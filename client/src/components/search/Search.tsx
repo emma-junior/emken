@@ -12,8 +12,8 @@ import {
   getDoc,
 } from "firebase/firestore";
 import {app} from '../../firebaseConfig'
-import { AuthContext } from '../../context/AuthContext';
-import { ChatContext } from "../../context/ChatContext";
+import { AuthContext } from '../../hooks/AuthContext';
+import { ChatContext } from "../../hooks/ChatContext";
 import "./search.scss"
 import { Link } from 'react-router-dom';
 import SearchResult from './SearchResult';

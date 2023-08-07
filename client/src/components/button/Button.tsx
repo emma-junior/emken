@@ -13,6 +13,7 @@ const Button = ({
   primary = true,
   size,
   backgroundColor,
+  onClick,
   label,
   ...props
 }: ButtonProps) => {
@@ -20,6 +21,7 @@ const Button = ({
   return (
     <button
       type="button"
+      onClick={onClick}
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={{ backgroundColor }}
       {...props}

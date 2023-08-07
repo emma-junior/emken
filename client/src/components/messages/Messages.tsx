@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { doc, getFirestore, onSnapshot } from "firebase/firestore";
-import { ChatContext } from "../../context/ChatContext";
+import { ChatContext } from "../../hooks/ChatContext";
 import {app} from '../../firebaseConfig'
 import "./messages.scss"
 import Message from "../message/Message";
@@ -13,14 +13,14 @@ const Messages = () => {
     const { data } = useContext(ChatContext);
 
     useEffect(() => {
-    const unSub = onSnapshot(doc(db, "chats", data.chatId), (doc) => {
-      doc.exists() && setMessages(doc.data().messages);
-    });
+      const unSub = onSnapshot(doc(db, "chats", data.chatId), (doc) => {
+        doc.exists() && setMessages(doc.data().messages);
+      });
 
-    return () => {
-      unSub();
-    };
-  }, [data.chatId]);
+      return () => {
+        unSub();
+      };
+    }, [data.chatId, db]);
 
   return (
     <div className="messages">
