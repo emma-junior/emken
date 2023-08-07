@@ -1,0 +1,74 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.details {
+    margin: 75px auto;
+
+    &_header {
+        display: flex;
+        width: 100%;
+        height: 260px;
+        justify-content: space-between;
+        position: relative;
+        padding: 0 120px;
+        @include respondMax("tablet") {
+            padding: 0 80px;
+        }
+        @include respondMax("mobile") {
+            padding: 0 30px;
+        }
+
+        &_name {
+            margin: 35px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #fff;
+            z-index: 3;
+
+            h1 {
+                @include respondMax("mobile") {
+                    font-size: 25px;
+                }
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+        &_pic {
+            width: 320px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .overlay {
+            @include overlay(rgba(12, 82, 187, 0.8));
+        }
+    }
+    
+    &_content {
+        width: 85%;
+        margin: 30px auto;
+        color: $col-primary;
+
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            margin: 5px 0;
+            font-size: 20px;
+        }
+        li {
+            font-size: 20px;
+        }
+        &_symptoms {
+            margin: 15px 0;
+        }
+    }
+}

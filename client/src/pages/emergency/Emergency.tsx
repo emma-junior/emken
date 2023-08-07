@@ -5,7 +5,7 @@ import Navbar from '../../components/navbar/Navbar';
 import "./emergency.scss"
 
 const Emergency = () => {
-    const acuteEmergency = emergency.filter(item => item.category === "acute-emergency");
+    const processedCategories = new Set();
   return (
     <>
       <Navbar />
@@ -18,13 +18,23 @@ const Emergency = () => {
           </div>
           <div className='emergency_main'>
             <h1 className='emergency_main_topic'>MEDICAL EMERGENCIES</h1>
-            <h2 className='emergency_main_category'>Acute Emergency</h2>
-            <ul className='emergency_main_emergencies'>{acuteEmergency.map((emergency) => (
-              <>
-                <li className='emergency_main_emergencies_name'><Link to={`/medical-emergency/${emergency.slug}`}>{emergency.name}</Link></li>
-                <hr />
-              </>
-            ))}</ul>
+            {emergency.map((emergencyItem, index) => {
+              if (!processedCategories.has(emergencyItem.category)) {
+                processedCategories.add(emergencyItem.category);
+                return (
+                  <div key={index}>
+                    <h2 className='emergency_main_category'>{emergencyItem.category}</h2>
+                    <ul className='emergency_main_emergencies'>{emergency.filter(item => item.category === emergencyItem.category).map((filteredCat, subIndex) => (
+                      <div key={subIndex}>
+                        <li className='emergency_main_emergencies_name'><Link to={`/medical-emergency/${filteredCat.slug}`}>{filteredCat.name}</Link></li>
+                        <hr />
+                      </div>
+                    ))}</ul>
+                  </div>
+                )
+              }
+              return null;
+            })}
           </div>
       </div>
     </>
