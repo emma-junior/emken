@@ -82,5 +82,15 @@ export const emergency = [
     symptoms: ["Pain.", "Redness and Swelling.", "Blisters.", "Skin Changes.", "Numbness.", "Shock"],
     treatment: ["Step away from the source of the burns.", "Place the affected area under running tap water or a bucket of water for about 10 - 20 minutes. This will reduce the pains and further damage. (Avoid applying iced water)", "Visit the nearest hospital for further care."],
     slug: "hot-water"
-  }
+  },
+
+  //Bites/stings
+  {
+    name: "Bee Stings",
+    category: "Bites/Stings",
+    overview: "Bee stings occur when a person is stung by a bee, resulting in the injection of venom into the skin. Bee stings can cause localized pain, swelling, and discomfort, and in some cases, they can lead to more severe allergic reactions. Understanding the symptoms, treatment, and potential complications of bee stings is important for proper management. \n When a bee stings, it leaves behind a venomous sac that continues to pump venom into the skin for a short period. The reaction to a bee sting can vary depending on factors such as the individual's sensitivity, the number of stings, and the type of bee.",
+    symptoms: ["Immediate Pain.", "Localized Swelling.", "Itching.", "Raised Red Area.", "Minor Allergic Reaction: Some people may experience a mild allergic reaction with more pronounced swelling, redness, and itching.", "For some individuals, bee stings can trigger more serious allergic reactions, known as anaphylaxis. Its symptoms may include difficulty breathing, swelling, rapid heartbeat, hives or rash, nausea and vomiting, dizziness or fainting"],
+    treatment: ["Move away from the bee to avoid possible repeat sting.", "Remove the stinger immediately if you can. You can achieve this by scrapping off with your nail.", "Apply ice to the area repeatedly.", "You can take paracetamol tablets for the pain.", "Please see a doctor, if you notice Body Itching, Swollen Face, and Difficulty in Breathing."],
+    slug: "bee-stings"
+  },
 ]

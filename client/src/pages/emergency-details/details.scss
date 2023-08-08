@@ -40,6 +40,9 @@
         }
         &_pic {
             width: 320px;
+            @include respondMax("mobile") {
+                width: 220px;
+            }
 
             img {
                 width: 100%;
@@ -59,13 +62,21 @@
 
         h2 {
             font-size: 30px;
+            @include respondMax("mobile") {
+                font-size: 25px;
+            }
         }
         p {
             margin: 5px 0;
             font-size: 20px;
+            @include respondMax("mobile") {
+                font-size: 18px;
+            }
         }
         li {
-            font-size: 20px;
+            @include respondMax("mobile") {
+                font-size: 18px;
+            }
         }
         &_symptoms {
             margin: 15px 0;
