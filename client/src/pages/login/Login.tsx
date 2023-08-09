@@ -38,7 +38,7 @@ const Login = () => {
     <section className='auth login'>
         <figure className='auth_image'>
             <img src='/assets/images/login-image.jpg' alt='register' />
-            <h1 className='quote'>Login to get full access to all our access.</h1>
+            <h1 className='quote'>Login to get full access to all our services.</h1>
             <div className='overlay'></div>
         </figure>
         <div className='auth_form'>
