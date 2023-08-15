@@ -45,7 +45,7 @@ const Chats = () => {
                   <ProfilePic letter={letter}  />
                   <div className="userChatInfo">
                       <span>{chat[1].userInfo?.username}</span>
-                      <p>{chat[1].lastMessage?.text.substr(0, 12)}...</p>
+                      <p>{chat[1].lastMessage?.text.substr(0, 14)}</p>
                   </div>
                 </div>
               </>
