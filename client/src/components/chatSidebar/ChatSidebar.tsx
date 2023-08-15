@@ -30,9 +30,9 @@ const ChatSidebar = () => {
             <li><HiArrowSmRight className='li-arrow' /> dr esther</li>
             <li><HiArrowSmRight className='li-arrow' />dr ezeh</li>
             <li><HiArrowSmRight className='li-arrow' />dr johnson</li>
-            <li><HiArrowSmRight className='li-arrow' />dr esther</li>
-            <li><HiArrowSmRight className='li-arrow' />dr ezeh</li>
-            <li><HiArrowSmRight className='li-arrow' />dr johnson</li>
+            <li><HiArrowSmRight className='li-arrow' />dr obi</li>
+            <li><HiArrowSmRight className='li-arrow' />dr bayo</li>
+            <li><HiArrowSmRight className='li-arrow' />dr phillip</li>
           </ul>}
         </div>
       <Search />
