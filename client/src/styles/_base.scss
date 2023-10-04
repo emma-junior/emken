@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input::placeholder {
+    color: $col-primary;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: conic-gradient(#0000 10%, $col-secondary);
+    mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+    animation: spinner-zp9dbg 1s infinite linear;
+}
+
+@keyframes spinner-zp9dbg {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.userChat {
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: #1766db;
+    }
+
+    .userChatInfo {
+        span {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 14px;
+            color: #fff;
+        }
+    }
+}
+
+.chat-mobile {
+    display: none;
+    width: 100%;
+
+    @include respondMax("tablet") {
+        display: flex;
+    }
+}
+
+.chat-desktop {
+    display: flex;
+    width: 100%;
+
+    @include respondMax("tablet") {
+        display: none;
+    }
+}
