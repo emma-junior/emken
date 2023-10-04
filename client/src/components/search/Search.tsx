@@ -87,7 +87,7 @@ const Search = () => {
   const letter = user?.username.charAt(0).toUpperCase()
   return (
     <div className='search'>
-        <div className="searchForm">
+        <div className="searchForm"> 
             <input
                 type="text"
                 placeholder="Find a user"
@@ -95,6 +95,7 @@ const Search = () => {
                 onChange={(e) => setUsername(e.target.value)}
                 value={username}
             />
+            <button className='searchForm_btn'>search</button>
         </div>
         {err && <span>User not found!</span>}
         {user && (

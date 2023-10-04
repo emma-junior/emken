@@ -5,7 +5,18 @@
     margin-bottom: 10px;
 
     .searchForm {
-        @include center(100%, 60px);
+        display: flex;
+        height: 60px;
+        width: 80%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        @include respondMax("tablet") {
+            width: 70%;
+        }
+        @include respondMax("mobile") {
+            width: 90%;
+        }
         input {
             border: 2px solid $col-white;
             background-color: transparent;
@@ -19,6 +30,12 @@
             &::placeholder {
                 color: $col-white;
             }
+        }
+        &_btn {
+            padding: 5px 8px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
         }
     }
    
