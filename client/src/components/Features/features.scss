@@ -8,6 +8,10 @@
     margin: 0 auto;
     padding: 35px 0;
     
+    @include respondMax("sm-desktop") {
+        width: 85%;
+    }
+
     @include respondMax("tablet") {
         width: 90%;
         padding: 15px 0;
@@ -22,6 +26,9 @@
         height: 400px;
         object-fit: contain;
         mix-blend-mode: color-burn;
+        @include respondMax("sm-desktop") {
+            width: 400px;
+        }
         @include respondMax("tablet") {
             width: 330px;
         }
