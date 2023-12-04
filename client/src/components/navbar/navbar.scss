@@ -35,6 +35,9 @@
                 width: 55%;
                 justify-content: space-between;
                 font-weight: 600;
+                @include respondMax("sm-desktop") {
+                    width: 70%;
+                }
                 @include respondMax("tablet") {
                     @include center(55%,35vh);
                 }

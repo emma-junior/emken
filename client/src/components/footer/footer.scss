@@ -5,6 +5,9 @@
     color: $col-primary;
     width: 75%;
     margin: 0 auto;
+    @include respondMax("sm-desktop") {
+        width: 85%;
+    }
     @include respondMax("tablet") {
         width: 95%;
     }

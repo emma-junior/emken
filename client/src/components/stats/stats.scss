@@ -15,7 +15,7 @@
         width: 65%;
         margin: 0 auto;
         justify-content: space-between;
-        @include respondMax("tablet") {
+        @include respondMax("sm-desktop") {
             width: 80%;
         }
         @include respondMax("mobile") {

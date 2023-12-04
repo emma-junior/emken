@@ -6,6 +6,7 @@ import "../../styles/auth.scss"
 import Input from '../../components/input/Input'
 import { useNavigate } from 'react-router'
 import Logo from '../../components/logo/Logo'
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const auth = getAuth(app)
@@ -52,7 +53,7 @@ const Register = () => {
   return (
     <section className='auth register'>
         <div className='auth_form'>
-            <div><Logo /></div>
+            <Link to="/"><Logo /></Link>
             <div className='auth_form_input'><Input name="username" type='text' handleInput={handleInput}  /></div>
             <div className='auth_form_input'><Input name="email" type="email" handleInput={handleInput}  /></div>
             <div className='auth_form_input'><Input name='password' type='password' handleInput={handleInput}/></div>

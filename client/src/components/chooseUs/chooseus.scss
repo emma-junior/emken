@@ -4,6 +4,10 @@
 .container {
     width: 55%;
 
+    @include respondMax("sm-desktop") {
+        width: 75%;
+    }
+
     @include respondMax("tablet") {
         width: 95%;
     }
