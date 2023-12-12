@@ -7,10 +7,11 @@ import { useAnimation } from "framer-motion";
 
 
 interface Props {
-    content: cardType
+  primary?: boolean;
+  content: cardType
 }
 
-const HomeCard = ({content}: Props) => {
+const HomeCard = ({primary = true, content}: Props) => {
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -20,12 +21,12 @@ const HomeCard = ({content}: Props) => {
   useEffect(() => {
     if (inView) {
       animation.start({
-        y: -30,
+        y: 0,
       });
     }
     if (!inView) {
       animation.start({
-        y: 30,
+        y: 50,
       });
     }
   }, [inView, animation]);

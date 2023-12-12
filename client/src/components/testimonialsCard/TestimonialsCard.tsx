@@ -3,10 +3,11 @@ import "./testimonialscard.scss"
 import { testimonialsType } from '../../data/testimonials'
 
 interface Props {
-    testimonial: testimonialsType
+  primary?: boolean;
+  testimonial: testimonialsType
 }
 
-const TestimonialsCard = ({testimonial}: Props) => {
+const TestimonialsCard = ({primary = true, testimonial}: Props) => {
   return (
     <div className='testimonialcard'>
         <img src={`/assets/images/testimonials/${testimonial.image}.jpg`} alt='' />

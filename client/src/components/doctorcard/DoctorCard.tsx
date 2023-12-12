@@ -6,9 +6,10 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 interface Props {
-    doctor: doctorsType
+  primary?: boolean;
+  doctor: doctorsType
 }
-const DoctorCard = ({doctor}:Props) => {
+const DoctorCard = ({primary = true, doctor}:Props) => {
   return (
     <section className='card'>
         <LazyLoadImage

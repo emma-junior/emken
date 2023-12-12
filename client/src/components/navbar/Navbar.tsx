@@ -10,6 +10,7 @@ import {app} from '../../firebaseConfig'
 import { signOut } from 'firebase/auth';
 import { nearbyHospital } from '../../helper/helper';
 
+
 const Navbar = () => {
     const auth = getAuth(app)
     const [color, setColor] = useState<boolean>(false);
