@@ -11,9 +11,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    primary: true,
     testimonial: {
         id: 1,
         image: "okafor",

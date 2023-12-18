@@ -10,6 +10,8 @@ import Stats from '../../components/stats/Stats'
 import Testimonials from '../../components/testmonials/Testimonials'
 import Footer from '../../components/footer/Footer'
 
+
+
 const Home = () => {
   return (
     <>
@@ -17,7 +19,7 @@ const Home = () => {
       <div className="blurry" style={{ top: "20%", left: "-4rem" }}></div>
       <section className='home'>
           <div className='nav-hero'>
-            <Navbar />
+            <Navbar  />
             <Hero />
           </div>
           <Services />
