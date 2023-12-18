@@ -7,11 +7,10 @@ import { useAnimation } from "framer-motion";
 
 
 interface Props {
-  primary?: boolean;
   content: cardType
 }
 
-const HomeCard = ({primary = true, content}: Props) => {
+const HomeCard = ({ content }: Props) => {
 
   const { ref, inView } = useInView({
     threshold: 0.1,

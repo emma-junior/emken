@@ -74,6 +74,7 @@
             }
         }
         li {
+            font-size: 20px;
             @include respondMax("mobile") {
                 font-size: 18px;
             }

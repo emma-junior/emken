@@ -93,4 +93,20 @@ export const emergency = [
     treatment: ["Move away from the bee to avoid possible repeat sting.", "Remove the stinger immediately if you can. You can achieve this by scrapping off with your nail.", "Apply ice to the area repeatedly.", "You can take paracetamol tablets for the pain.", "Please see a doctor, if you notice Body Itching, Swollen Face, and Difficulty in Breathing."],
     slug: "bee-stings"
   },
+  {
+    name: "Dog Bites",
+    category: "Bites/Stings",
+    overview: "Dog bites, while relatively common, can lead to a range of medical concerns, from minor injuries to severe complications. Understanding the potential risks, symptoms, and necessary actions following a dog bite is crucial for proper management. \n When a dog bites, the severity of the injury depends on various factors, including the dog's size and breed, the location and depth of the bite, and the victim's age and overall health.",
+    symptoms: ["Puncture Wounds and Tearing.", "Bleeding.", "Bruising and Swelling.", "Fractures or Nerve Damage."],
+    treatment: ["Wash the bite area with plenty of soap and water (this will reduce the amount of germ on the wound).", "Apply pressure on the bite site with clean cloths or gauze.", "See your doctor immediately."],
+    slug: "dog-bites"
+  },
+  {
+    name: "Snake Bite",
+    category: "Bites/Stings",
+    overview: "Snake bites, though relatively uncommon, can lead to significant medical consequences depending on the snake species, the amount of venom injected, and the location of the bite. Venomous snakes inject toxins that can cause a range of symptoms, from mild local effects to life-threatening systemic reactions. \n Understanding the signs of a snake bite, immediate actions to take, and seeking prompt medical attention are crucial components of managing this potentially serious situation.",
+    symptoms: ["Pain and Swelling.", "Fang Marks.", "Local Tissue Damage.", "Systemic Symptoms: Depending on the snake's venom, systemic symptoms may occur, including nausea, vomiting, dizziness, weakness, and difficulty breathing.", "Bleeding and Clotting Issues: Some snake venoms affect the blood-clotting system, leading to symptoms such as bleeding from the gums, nose, or other sites.", "Neurological Symptoms: Certain snake venoms can cause neurological symptoms, such as numbness, tingling, muscle weakness, or paralysis."],
+    treatment: ["Apply pressure above the affected path using a clean cloth or bandage.", "Rest the affected limb to prevent spread of the snake venom.", "Visit any hospital close to you for further treatment."],
+    slug: "snake-bite"
+  },
 ]

@@ -10,9 +10,13 @@ import {app} from '../../firebaseConfig'
 import { signOut } from 'firebase/auth';
 import { nearbyHospital } from '../../helper/helper';
 
-
-const Navbar = () => {
+interface Props {
+  isLoggedIn: boolean;
+}
+const Navbar = ({isLoggedIn = false}) => {
     const auth = getAuth(app)
+    const {currentUser} = useContext(AuthContext)
+
     const [color, setColor] = useState<boolean>(false);
     const [click, setClick] = useState<boolean>(false);
 
@@ -24,14 +28,12 @@ const Navbar = () => {
         }
     };
 
-    const {currentUser} = useContext(AuthContext)
-
-
     const handleClick = () => setClick(!click)
 
     useEffect(() => {
 		window.addEventListener("scroll", changeColor);
     }, [])
+    
     
   return (
     <nav className={color ? 'navbar navbar-bg' : 'navbar'}>
@@ -44,8 +46,8 @@ const Navbar = () => {
                     <li onClick={nearbyHospital}>FIND HOSPITAL</li>
                     <li ><Link to="/chat-with-doctor">CHAT WITH DOCTOR</Link></li>
                 </ul>
-                {currentUser ? <div className='signup-login'>
-                    <p className='signup user'>{currentUser.displayName}</p>
+                {currentUser || isLoggedIn ? <div className='signup-login'>
+                    <p className='signup user'>{currentUser?.displayName}</p>
                     <div onClick={() => signOut(auth)} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div>
                     </div>
                 :<div className='signup-login'>

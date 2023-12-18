@@ -7,6 +7,7 @@ import {MdArrowBackIos} from "react-icons/md";
 import { Link } from 'react-router-dom';
 
 const Details = () => {
+
     const { slug } = useParams();
     const medEmergency = emergency.find((emergency) => emergency.slug === slug)
 
