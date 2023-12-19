@@ -1,19 +1,20 @@
 import React,{useState, useEffect, useContext} from 'react'
+import { useNavigate } from 'react-router-dom';
 import Button from '../button/Button';
 import "./navbar.scss"
 import {FaBars, FaTimes} from "react-icons/fa"
-import { Link } from 'react-router-dom';
-import Logo from '../logo/Logo';
 import { AuthContext } from '../../hooks/AuthContext';
 import {getAuth} from "firebase/auth"
 import {app} from '../../firebaseConfig'
 import { signOut } from 'firebase/auth';
+import Logo from '../logo/Logo';
 import { nearbyHospital } from '../../helper/helper';
 
-interface Props {
-  isLoggedIn: boolean;
-}
 const Navbar = ({isLoggedIn = false}) => {
+    //isLoggedIn was introduced because of storybook
+
+    const navigate = useNavigate();
+
     const auth = getAuth(app)
     const {currentUser} = useContext(AuthContext)
 
@@ -38,23 +39,23 @@ const Navbar = ({isLoggedIn = false}) => {
   return (
     <nav className={color ? 'navbar navbar-bg' : 'navbar'}>
         <div className='navbar-wrapper'>
-            <Link to="/"><Logo /></Link>
+            <div onClick={() => navigate("/")}><Logo /></div>
             <div className={click ? 'show-sidebar' : 'nav-links'}>
                 <ul>
-                    <li><Link to="/">HOME</Link></li>
-                    <li><Link to="/medical-emergency">MEDICAL EMERGENCY</Link></li>
+                    <li onClick={() => navigate("/")}>HOME</li>
+                    <li onClick={() => navigate("/medical-emergency")}>MEDICAL EMERGENCY</li>
                     <li onClick={nearbyHospital}>FIND HOSPITAL</li>
-                    <li ><Link to="/chat-with-doctor">CHAT WITH DOCTOR</Link></li>
+                    <li onClick={() => navigate("/chat-with-doctor")}>CHAT WITH DOCTOR</li>
                 </ul>
                 {currentUser || isLoggedIn ? <div className='signup-login'>
-                    <p className='signup user'>{currentUser?.displayName}</p>
+                    <p className='signup user'>{currentUser?.displayName || "John"}</p>
                     <div onClick={() => signOut(auth)} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div>
                     </div>
-                :<div className='signup-login'>
-                    <p className='signup'><Link to="/register">Sign Up</Link></p>
-                    <div className='login-btn-wrapper'><Link to="/login"><Button size = 'medium' label="Log In" /></Link></div>
-                </div>
-                }
+                    :<div className='signup-login'>
+                        <p onClick={() => navigate("/register")} className='signup'>Sign Up</p>
+                        <div onClick={() => navigate("/login")} className='login-btn-wrapper'><Button size = 'medium' label="Log In" /></div>
+                    </div>
+                }             
             </div>
             <div className='mobile-icon' onClick={handleClick}>
                 {!click ?  <FaBars /> : <FaTimes />}
