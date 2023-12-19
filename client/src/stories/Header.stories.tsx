@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Navbar from '../components/navbar/Navbar';
+import { BrowserRouter } from 'react-router-dom'
 import { AuthContextProvider } from '../hooks/AuthContext';
+import "../styles/index.scss";
 
 const meta = {
   title: 'Headers/Header',
@@ -8,7 +10,9 @@ const meta = {
   decorators: [
     (Story) => (
       <AuthContextProvider>
-        <Story />
+        <BrowserRouter>
+          <Story />
+        </BrowserRouter>
       </AuthContextProvider>
     ),
   ],
