@@ -46,7 +46,7 @@ const Navbar = ({isLoggedIn = false}) => {
                     <li><Link to="/chat-with-doctor">CHAT WITH DOCTOR</Link></li>
                 </ul>
                 {currentUser || isLoggedIn ? <div className='signup-login'>
-                    <p className='signup user'>{currentUser?.displayName || "John"}</p>
+                    <p className='signup user'>{currentUser?.displayName || `${isLoggedIn ? "Ben" : ""}`}</p>
                     <div onClick={() => signOut(auth)} className='login-btn-wrapper'><Button size = 'medium' label="Log Out" /></div>
                     </div>
                     :<div className='signup-login'>
