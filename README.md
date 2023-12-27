@@ -19,4 +19,5 @@
 
 *Heart Attack emergency Page*
 ![emken_emergency_page](/screenshots/heart-attack-pg.png)
+
 ![emken_emergency_page](/screenshots/heart-attack-pg-cont.png)
