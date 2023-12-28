@@ -26,3 +26,13 @@
 ### Links
 
 - Live Site URL: [emken](https://emken.vercel.app/)
+
+---
+### Tools/Resources used
+
+- [React](https://react.dev/learn/)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [Firebase](https://firebase.google.com/)
+- [Sass](https://sass-lang.com/documentation/)
+- [Storybook](https://storybook.js.org/docs/get-started/install/)
+
