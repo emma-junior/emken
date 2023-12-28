@@ -9,6 +9,7 @@ import {app} from '../../firebaseConfig'
 import { signOut } from 'firebase/auth';
 import Logo from '../logo/Logo';
 import { nearbyHospital } from '../../helper/helper';
+import { APIKEY } from '../../constants';
 
 const Navbar = ({isLoggedIn = false}) => {
     //isLoggedIn was introduced because of storybook
@@ -33,7 +34,7 @@ const Navbar = ({isLoggedIn = false}) => {
 		window.addEventListener("scroll", changeColor);
     }, [])
     
-    
+    console.log(APIKEY, "api_key")
   return (
     <nav className={color ? 'navbar navbar-bg' : 'navbar'}>
         <div className='navbar-wrapper'>
