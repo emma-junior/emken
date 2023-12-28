@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from 'firebase/firestore'
 import { getStorage } from "firebase/storage";
+import { APIKEY, APPID, AUTHDOMAIN, MEASUREMENTID, MESSAGINGSENDERID, PROJECTID, STORAGEBUCKET } from "./constants";
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -9,13 +10,13 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB7Pnm3ibxPzBocDNZS_XCjpkZhe0_YTr0",
-  authDomain: "emken-backend.firebaseapp.com",
-  projectId: "emken-backend",
-  storageBucket: "emken-backend.appspot.com",
-  messagingSenderId: "238337492864",
-  appId: "1:238337492864:web:06cd2b909be7a5399d2365",
-  measurementId: "G-4GCF8J8CE7"
+  apiKey: APIKEY,
+  authDomain: AUTHDOMAIN,
+  projectId: PROJECTID,
+  storageBucket: STORAGEBUCKET,
+  messagingSenderId: MESSAGINGSENDERID,
+  appId: APPID,
+  measurementId: MEASUREMENTID
 };
 
 // Initialize Firebase
