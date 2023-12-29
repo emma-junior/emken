@@ -36,3 +36,7 @@
 - [Sass](https://sass-lang.com/documentation/)
 - [Storybook](https://storybook.js.org/docs/get-started/install/)
 
+---
+### License
+
+[MIT License](LICENSE)
