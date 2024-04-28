@@ -4,6 +4,7 @@
 .doctors-container {
     margin: 60px auto;
     width: 75%;
+    transition-duration: 2s;
     
     @include respondMax("sm-desktop") {
         width: 85%;
