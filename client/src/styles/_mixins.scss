@@ -1,76 +1,72 @@
-
 @mixin floatersBackground() {
-    background-color: #fff;
-    border: 1px solid rgba(33, 63, 125, 0.06);
-    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    font-size: 15px;
-    color: #525558
+  background-color: #fff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  font-size: 15px;
+  color: #525558;
 }
 @mixin center($width, $height) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: $width;
-    height: $height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+  height: $height;
 }
-@mixin overlay($bg) {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $bg;
-    z-index: 2;
+@mixin overlay($bg, $opacity) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $bg;
+  opacity: $opacity;
+  z-index: 2;
 }
 @mixin iconBg($color, $bg) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 auto;
-    color: $color;
-    background: $bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+  color: $color;
+  background: $bg;
 }
 
 // breakpoints
 $breakpoints: (
-    "mobile": 600px,
-    "tablet": 900px,
-    "lg-tablet": 920px,
-    "sm-desktop": 1125px,
-    "desktop": 1366px,
-    ) !default;
+  "mobile": 600px,
+  "tablet": 900px,
+  "lg-tablet": 920px,
+  "sm-desktop": 1125px,
+  "desktop": 1366px,
+) !default;
 
 @mixin respondMin($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (min-width: map-get($breakpoints, $breakpoint)) {
-            @content;
-        }
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
     }
-
-    @else {
-        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         +"Available breakpoints are: #{map-keys($breakpoints)}.";
-    }
+  }
 }
 
 @mixin respondMax($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (max-width: map-get($breakpoints, $breakpoint)) {
-            @content;
-        }
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
     }
-
-    @else {
-        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         +"Available breakpoints are: #{map-keys($breakpoints)}.";
-    }
+  }
 }
